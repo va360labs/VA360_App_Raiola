@@ -16,6 +16,7 @@
     "node": ">=22"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.2.0",
     "better-sqlite3": "^12.11.1",
     "jose": "^6.2.13",
     "lucide-react": "^1.61.0",

@@ -521,7 +521,7 @@
     "id": "item-2ff936ee",
     "name": "US-03: Borradores con citas",
     "description": "# US-03: Borradores con citas\n\n**Horas estimadas:** 16.0\n**Pantallas:** Bandeja, Detalle de mensaje\n\nComo persona de recepción, quiero que cada mensaje llegue con una respuesta preparada a partir de los documentos y con sus fuentes, para contestar en segundos sin buscar nada.",
-    "state": "user_stories",
+    "state": "in_progress",
     "parent_id": null,
     "labels": [
       "US"
@@ -537,13 +537,13 @@
     "created_at": "2026-10-23T17:12:14.654991+00:00",
     "external_source": "",
     "external_id": "",
-    "updated_at": "2026-10-23T17:12:14.661607+00:00"
+    "updated_at": "2026-10-23T18:16:26.043273+00:00"
   },
   {
     "id": "item-fc64cbda",
     "name": "UC-301: Redactar el borrador citando los documentos",
     "description": "# UC-301: Redactar el borrador citando los documentos\n\n**User Story:** US-03: Borradores con citas\n**Actor:** sistema (Claude) para la recepción\n**Horas estimadas:** 10.0\n**Pantallas:** Detalle de mensaje\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.1] Dado un documento de tarifas que indica «Sesión de fisioterapia: 40 €», cuando llega el mensaje «¿Cuánto cuesta una sesión?», entonces en menos de 15 segundos el mensaje pasa a «Borrador listo» con un borrador que contiene «40 €» y al menos una cita con el nombre del documento y un fragmento que contiene «40 €».\n- AC-02: [JE-F1.1] Cada precio, hora, fecha o cifra que aparece en un borrador figura también en alguno de sus fragmentos citados; si no es así, el mensaje pasa a «Requiere revisión» con el motivo «Dato no encontrado en los documentos» y no se puede enviar automáticamente.\n- AC-03: [JR-F1.1] El borrador se redacta en el idioma del mensaje recibido: un mensaje en inglés recibe un borrador en inglés y uno en español, un borrador en español.\n- AC-04: [JR-F1.5] Al pulsar una cita del borrador se muestra el nombre del documento, su categoría y el fragmento completo citado, con el texto citado resaltado.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "in_progress",
     "parent_id": "item-2ff936ee",
     "labels": [
       "UC",
@@ -561,7 +561,8 @@
     },
     "created_at": "2026-10-23T17:12:14.666121+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:16:26.031760+00:00"
   },
   {
     "id": "ac-4fd4f5ec",
@@ -631,7 +632,7 @@
     "id": "item-c156dd1d",
     "name": "UC-302: Pasar a una persona lo que no está claro",
     "description": "# UC-302: Pasar a una persona lo que no está claro\n\n**User Story:** US-03: Borradores con citas\n**Actor:** sistema para la recepción\n**Horas estimadas:** 6.0\n**Pantallas:** Detalle de mensaje, Bandeja\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.4] Cuando llega una pregunta cuya respuesta no está en los documentos (por ejemplo «¿Tenéis parking?» sin ninguna mención a parking), el mensaje pasa a «Requiere revisión» con el motivo «No hay información en los documentos» y no se propone ninguna respuesta con datos.\n- AC-02: [JE-F1.3] Cuando un mensaje describe síntomas o pide consejo clínico (por ejemplo «Me duele la rodilla, ¿qué ejercicios hago?»), el mensaje pasa a «Requiere revisión» con el motivo «Consulta clínica», también con el envío automático activado.\n- AC-03: [JR-F1.4] Si la generación del borrador falla o no hay clave de Anthropic configurada, el mensaje pasa a «Requiere revisión» con el motivo «No se pudo generar el borrador» y un botón «Reintentar» que vuelve a lanzar la redacción.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "in_progress",
     "parent_id": "item-2ff936ee",
     "labels": [
       "UC",
@@ -649,7 +650,8 @@
     },
     "created_at": "2026-10-23T17:12:14.681661+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:16:27.896547+00:00"
   },
   {
     "id": "ac-2ec4545b",

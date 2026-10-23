@@ -7,8 +7,9 @@
     "db_infra",
     "fase-1-base",
     "fase-2-documentos",
-    "fase-3-entrada"
+    "fase-3-entrada",
+    "fase-4-redaccion"
   ],
-  "current_phase": "review-fase-3",
-  "last_updated": "2026-10-23T18:05:59Z"
+  "current_phase": "review-fase-4",
+  "last_updated": "2026-10-23T18:16:30Z"
 }

@@ -11,7 +11,7 @@ Demo del webinar VA360 × Raiola. Producto, discovery, PRD y plan en [`doc/`](do
 | 1. Base: proyecto, base de datos, comprobación de estado y acceso | Hecha |
 | 2. Documentos: subida (PDF, DOCX, TXT, Markdown), reemplazo y borrado | Hecha |
 | 3. Entrada de mensajes: webhooks de WhatsApp Cloud API y correo (Postmark), simulador | Hecha |
-| 4. Redacción con citas | Pendiente |
+| 4. Redacción con citas (Claude), escalado a una persona y reintento | Hecha |
 | 5. Bandeja, revisión y envío automático | Pendiente |
 | 6. Contenedor Docker para Coolify y pruebas de aceptación | Pendiente |
 
@@ -38,6 +38,14 @@ En el primer arranque se crea la carpeta `data/` con la base de datos vacía y l
 | `npm run build` y `npm start` | Build de producción y servidor |
 | `npm test` | Tests unitarios y de integración (Vitest) |
 | `npm run lint` · `npm run typecheck` | ESLint y TypeScript |
+
+## Cómo se redacta cada respuesta
+
+Cada mensaje nuevo entra en una cola que procesa el propio servidor. Claude (por defecto `claude-opus-5-5`, cambiable con `ANTHROPIC_MODEL`) recibe los documentos listos de la clínica, con las citas nativas de la API activadas y caché de prompt, y redacta la respuesta en el idioma del paciente.
+
+El borrador queda **listo** solo si cita los documentos y cada precio, hora, fecha o cifra que contiene aparece en el texto citado. Si no, el mensaje pasa a **Requiere revisión** con el motivo: «No hay información en los documentos», «Consulta clínica», «Dato no encontrado en los documentos» o «No se pudo generar el borrador» (este último se puede reintentar).
+
+Para pruebas sin coste, `DRAFT_MODEL=fake` usa un modelo determinista que responde con la línea del documento que más se parece a la pregunta.
 
 ## Webhooks
 

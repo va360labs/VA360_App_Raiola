@@ -224,6 +224,13 @@ export function Simulator() {
                         {item.status && `, ${STATUS_LABELS[item.status]}`}
                       </p>
                       {item.reviewReason && <p className="mt-1 text-xs text-review">{item.reviewReason}</p>}
+                      {item.draft && <DraftPreview draft={item.draft} />}
+                      {item.messageId !== null && item.reviewReason === "No se pudo generar el borrador" && (
+                        <RetryButton messageId={item.messageId} onDone={() => mutate()} />
+                      )}
+                      {item.direction === "in" && (item.status === "new" || item.status === "drafting") && (
+                        <p className="mt-2 text-xs text-ink-muted">Redactando borrador…</p>
+                      )}
                     </div>
                   </li>
                 ))}
@@ -236,7 +243,49 @@ export function Simulator() {
   );
 }
 
-const inputClass = "block h-11 w-full rounded-control border border-line-strong bg-panel px-3 text-base text-ink";
+/** Proposed answer with its sources; the full review screen arrives with the inbox. */
+function DraftPreview({ draft }: { draft: NonNullable<Conversation["items"][number]["draft"]> }) {
+  if (!draft.text) return null;
+  return (
+    <div className="mt-3 rounded-control border border-line bg-panel px-3 py-2.5">
+      <p className="text-xs font-medium text-ink-muted">Borrador propuesto</p>
+      <p className="mt-1 whitespace-pre-wrap text-ink">{draft.text}</p>
+      {draft.citations.length > 0 && (
+        <ol className="mt-2 space-y-1">
+          {draft.citations.map((citation, index) => (
+            <li key={index} className="text-xs text-ink-muted">
+              <span className="tabular mr-1 inline-flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-action-subtle px-1 font-semibold text-action-active">
+                {index + 1}
+              </span>
+              {citation.documentName}: <mark className="rounded-sm bg-action-subtle px-0.5 text-ink">{citation.citedText.trim()}</mark>
+            </li>
+          ))}
+        </ol>
+      )}
+    </div>
+  );
+}
+
+function RetryButton({ messageId, onDone }: { messageId: number; onDone: () => void }) {
+  const [pending, setPending] = useState(false);
+  return (
+    <Button
+      variant="secondary"
+      className="mt-2"
+      disabled={pending}
+      onClick={async () => {
+        setPending(true);
+        await fetch(`/api/messages/${messageId}/retry`, { method: "POST" }).catch(() => null);
+        setPending(false);
+        onDone();
+      }}
+    >
+      {pending ? "Reintentando…" : "Reintentar"}
+    </Button>
+  );
+}
+
+const inputClass ="block h-11 w-full rounded-control border border-line-strong bg-panel px-3 text-base text-ink";
 
 function Field({ id, label, children }: { id: string; label: string; children: React.ReactNode }) {
   return (

@@ -5,8 +5,9 @@
   "completed_phases": [
     "stitch_designs",
     "db_infra",
-    "fase-1-base"
+    "fase-1-base",
+    "fase-2-documentos"
   ],
-  "current_phase": "review-fase-1",
-  "last_updated": "2026-10-23T17:49:47Z"
+  "current_phase": "review-fase-2",
+  "last_updated": "2026-10-23T17:57:54Z"
 }

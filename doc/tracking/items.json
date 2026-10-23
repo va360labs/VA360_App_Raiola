@@ -24,7 +24,7 @@
     "id": "item-f79f5a67",
     "name": "US-01: Documentos de la clínica",
     "description": "# US-01: Documentos de la clínica\n\n**Horas estimadas:** 10.0\n**Pantallas:** Documentos\n\nComo dueño/a de la clínica, quiero subir y mantener al día mis documentos, para que las respuestas usen siempre mis datos reales.",
-    "state": "user_stories",
+    "state": "in_progress",
     "parent_id": null,
     "labels": [
       "US"
@@ -40,13 +40,13 @@
     "created_at": "2026-10-23T17:12:14.558926+00:00",
     "external_source": "",
     "external_id": "",
-    "updated_at": "2026-10-23T17:12:14.563738+00:00"
+    "updated_at": "2026-10-23T17:51:56.720847+00:00"
   },
   {
     "id": "item-b8f808c3",
     "name": "UC-101: Subir documentos",
     "description": "# UC-101: Subir documentos\n\n**User Story:** US-01: Documentos de la clínica\n**Actor:** dueño/a o recepción (ICP-1, ICP-2)\n**Horas estimadas:** 6.0\n**Pantallas:** Documentos\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.1] Dada la pantalla Documentos, cuando la persona sube un archivo PDF, DOCX, TXT o Markdown de hasta 10 MB, entonces el documento aparece en la lista con su nombre, categoría, fecha de subida y estado «Listo» en menos de 30 segundos.\n- AC-02: [JR-F1.1] Cuando la persona intenta subir un archivo de otro formato o de más de 10 MB, entonces la subida se rechaza con un mensaje que indica el motivo y el archivo no aparece en la lista.\n- AC-03: [JR-F1.1] Al subir un documento se elige una categoría (Tarifas, Horarios, Políticas, Preguntas frecuentes u Otros); la lista muestra la categoría y permite filtrar por ella.\n- AC-04: [JE-F1.1] Si un PDF no contiene texto extraíble, el documento queda en estado «Sin texto», se muestra un aviso para subir una versión con texto y ese documento no se usa para redactar respuestas.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "in_progress",
     "parent_id": "item-f79f5a67",
     "labels": [
       "UC",
@@ -64,7 +64,8 @@
     },
     "created_at": "2026-10-23T17:12:14.568732+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T17:51:56.709847+00:00"
   },
   {
     "id": "ac-9b402526",
@@ -134,7 +135,7 @@
     "id": "item-57676cd8",
     "name": "UC-102: Mantener los documentos al día",
     "description": "# UC-102: Mantener los documentos al día\n\n**User Story:** US-01: Documentos de la clínica\n**Actor:** dueño/a o recepción (ICP-1, ICP-2)\n**Horas estimadas:** 4.0\n**Pantallas:** Documentos\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.3] Dado un documento de tarifas que indica «Sesión de fisioterapia: 40 €», cuando la persona lo reemplaza por una versión que indica «45 €», entonces el siguiente borrador que pregunte por el precio de la sesión dice 45 € y no menciona 40 €.\n- AC-02: [JR-F1.3] Cuando la persona elimina un documento tras confirmar el aviso, el documento desaparece de la lista y ningún borrador generado después lo cita.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "in_progress",
     "parent_id": "item-f79f5a67",
     "labels": [
       "UC",
@@ -152,7 +153,8 @@
     },
     "created_at": "2026-10-23T17:12:14.579732+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T17:51:58.611992+00:00"
   },
   {
     "id": "ac-d1eb6cb2",

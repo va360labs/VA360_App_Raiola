@@ -9,7 +9,7 @@ Demo del webinar VA360 × Raiola. Producto, discovery, PRD y plan en [`doc/`](do
 | Fase del plan | Estado |
 |---|---|
 | 1. Base: proyecto, base de datos, comprobación de estado y acceso | Hecha |
-| 2. Documentos | Pendiente |
+| 2. Documentos: subida (PDF, DOCX, TXT, Markdown), reemplazo y borrado | Hecha |
 | 3. Entrada de mensajes y simulador | Pendiente |
 | 4. Redacción con citas | Pendiente |
 | 5. Bandeja, revisión y envío automático | Pendiente |

@@ -1,0 +1,1972 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\valen\\Documents\\Demos\\VA360_App_Raiola\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "C:\\Users\\valen\\Documents\\Demos\\VA360_App_Raiola\\playwright.config.ts",
+    "rootDir": "C:/Users/valen/Documents/Demos/VA360_App_Raiola/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/valen/Documents/Demos/VA360_App_Raiola/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/valen/Documents/Demos/VA360_App_Raiola/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/setup\\.ts/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/valen/Documents/Demos/VA360_App_Raiola/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "acceptance",
+        "name": "acceptance",
+        "testDir": "C:/Users/valen/Documents/Demos/VA360_App_Raiola/e2e",
+        "testIgnore": [
+          "/setup\\.ts/"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\valen\\Documents\\Demos\\VA360_App_Raiola\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "setup",
+        "testDir": "C:\\Users\\valen\\Documents\\Demos\\VA360_App_Raiola\\e2e",
+        "snapshotDir": "C:\\Users\\valen\\Documents\\Demos\\VA360_App_Raiola\\e2e",
+        "testIgnore": [],
+        "testMatch": {},
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:3200",
+          "locale": "es-ES",
+          "timezoneId": "Europe/Madrid",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "setup"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\valen\\Documents\\Demos\\VA360_App_Raiola\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "acceptance",
+        "testDir": "C:\\Users\\valen\\Documents\\Demos\\VA360_App_Raiola\\e2e",
+        "snapshotDir": "C:\\Users\\valen\\Documents\\Demos\\VA360_App_Raiola\\e2e",
+        "testIgnore": {},
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:3200",
+          "locale": "es-ES",
+          "timezoneId": "Europe/Madrid",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "storageState": "e2e/.auth/admin.json"
+        },
+        "dependencies": [
+          "setup"
+        ],
+        "ignoreSnapshots": false,
+        "__projectId": "acceptance"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": ".quality/evidence/respuestas-automaticas/acceptance/results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node e2e/start-server.mjs",
+      "url": "http://localhost:3200/api/health",
+      "reuseExistingServer": false,
+      "timeout": 120000,
+      "env": {
+        "PORT": "3200",
+        "DATA_DIR": "e2e/.data",
+        "DRAFT_MODEL": "fake",
+        "ADMIN_PASSWORD": "e2e-clave-de-prueba",
+        "WHATSAPP_VERIFY_TOKEN": "e2e-verify-token",
+        "WHATSAPP_APP_SECRET": "e2e-app-secret",
+        "EMAIL_WEBHOOK_TOKEN": "e2e-email-token",
+        "APP_TIMEZONE": "Europe/Madrid"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "setup.ts",
+      "file": "setup.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "AC-36 arranca con una base de datos vacía creada en el primer arranque",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 59,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T18:46:51.098Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c47772be3012d73a1974-df6986a4f800e5c23200",
+          "file": "setup.ts",
+          "line": 9,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "accesibilidad.spec.ts",
+      "file": "accesibilidad.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Accesibilidad WCAG 2.1 AA (axe)",
+          "file": "accesibilidad.spec.ts",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Bandeja con un mensaje abierto",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 771,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:46:51.460Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "40fa4071676a3a15be2d-b84bf4fcfac24017e1cb",
+              "file": "accesibilidad.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "Pantalla /documentos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 970,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:46:52.319Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "40fa4071676a3a15be2d-0d0f323ef6ed0dd4241d",
+              "file": "accesibilidad.spec.ts",
+              "line": 24,
+              "column": 9
+            },
+            {
+              "title": "Pantalla /simulador",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 950,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:46:53.293Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "40fa4071676a3a15be2d-ff0aaa9daae92ee77e26",
+              "file": "accesibilidad.spec.ts",
+              "line": 24,
+              "column": 9
+            },
+            {
+              "title": "Pantalla /ajustes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 928,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:46:54.247Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "40fa4071676a3a15be2d-9743ad2d9a401cfdd611",
+              "file": "accesibilidad.spec.ts",
+              "line": 24,
+              "column": 9
+            }
+          ],
+          "suites": [
+            {
+              "title": "sin sesión",
+              "file": "accesibilidad.spec.ts",
+              "line": 31,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "Pantalla /login",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "acceptance",
+                      "projectName": "acceptance",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 362,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-10-23T18:46:55.178Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "40fa4071676a3a15be2d-fb9bbf83cb52fa99209c",
+                  "file": "accesibilidad.spec.ts",
+                  "line": 33,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "us01-documentos.spec.ts",
+      "file": "us01-documentos.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@US-01 @UC-101 Subir documentos",
+          "file": "us01-documentos.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "AC-01 un TXT de hasta 10 MB aparece en la lista como «Listo» en menos de 30 segundos",
+              "ok": true,
+              "tags": [
+                "US-01",
+                "UC-101"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 274,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:46:55.580Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4046cbbce3abaf2fa722-86db03aa4e7a2f21a8ea",
+              "file": "us01-documentos.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "AC-02 un archivo de otro formato se rechaza con el motivo y no aparece",
+              "ok": true,
+              "tags": [
+                "US-01",
+                "UC-101"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 297,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:46:55.857Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4046cbbce3abaf2fa722-477e8058c8c34891bf0b",
+              "file": "us01-documentos.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "AC-02 un archivo de más de 10 MB se rechaza",
+              "ok": true,
+              "tags": [
+                "US-01",
+                "UC-101"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 37,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:46:56.157Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4046cbbce3abaf2fa722-032eb35b915bd5f33023",
+              "file": "us01-documentos.spec.ts",
+              "line": 31,
+              "column": 7
+            },
+            {
+              "title": "AC-03 la categoría se elige al subir y la lista se filtra por ella",
+              "ok": true,
+              "tags": [
+                "US-01",
+                "UC-101"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 222,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:46:56.198Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4046cbbce3abaf2fa722-c6ac54b231e8704f671f",
+              "file": "us01-documentos.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "AC-04 un PDF sin texto queda «Sin texto», con aviso, y no se usa",
+              "ok": true,
+              "tags": [
+                "US-01",
+                "UC-101"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 196,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:46:56.424Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4046cbbce3abaf2fa722-f976e0b8d0789ce8bb7c",
+              "file": "us01-documentos.spec.ts",
+              "line": 49,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "@US-01 @UC-102 Mantener los documentos al día",
+          "file": "us01-documentos.spec.ts",
+          "line": 62,
+          "column": 6,
+          "specs": [
+            {
+              "title": "AC-05 tras reemplazar 40 € por 45 €, el siguiente borrador dice 45 € y no 40 €",
+              "ok": true,
+              "tags": [
+                "US-01",
+                "UC-102"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2189,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:46:56.624Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4046cbbce3abaf2fa722-dbadf1a1fdc3c450859e",
+              "file": "us01-documentos.spec.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "AC-06 un documento eliminado tras confirmar deja de aparecer y no se cita",
+              "ok": true,
+              "tags": [
+                "US-01",
+                "UC-102"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1171,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:46:58.817Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4046cbbce3abaf2fa722-794b0204b06c33935186",
+              "file": "us01-documentos.spec.ts",
+              "line": 79,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "us02-bandeja.spec.ts",
+      "file": "us02-bandeja.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@US-02 @UC-201 Recibir mensajes de WhatsApp por webhook",
+          "file": "us02-bandeja.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "AC-07 la verificación de Meta devuelve el challenge con el token correcto y 403 si no",
+              "ok": true,
+              "tags": [
+                "US-02",
+                "UC-201"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:46:59.995Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8689dbb8ffe426c2435-d1e1dc6e40b9fb3439ad",
+              "file": "us02-bandeja.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "AC-08 un mensaje de texto responde 200 en menos de 2 s y aparece en la bandeja",
+              "ok": true,
+              "tags": [
+                "US-02",
+                "UC-201"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 264,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:00.005Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8689dbb8ffe426c2435-1f6b8fb0ee5d92971391",
+              "file": "us02-bandeja.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "AC-09 el mismo mensaje dos veces deja una sola entrada",
+              "ok": true,
+              "tags": [
+                "US-02",
+                "UC-201"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:00.273Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8689dbb8ffe426c2435-ea4d9f5c4af1a6eb0360",
+              "file": "us02-bandeja.spec.ts",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "AC-10 con la verificación de firma activa, una firma que no coincide da 401 y no se guarda",
+              "ok": true,
+              "tags": [
+                "US-02",
+                "UC-201"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:00.286Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8689dbb8ffe426c2435-e9006c6035df2d1b891b",
+              "file": "us02-bandeja.spec.ts",
+              "line": 42,
+              "column": 7
+            },
+            {
+              "title": "AC-11 un mensaje que no es de texto aparece como «Tipo de mensaje no soportado» en revisión",
+              "ok": true,
+              "tags": [
+                "US-02",
+                "UC-201"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 256,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:00.298Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8689dbb8ffe426c2435-492b02c7248bfb9669db",
+              "file": "us02-bandeja.spec.ts",
+              "line": 50,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "@US-02 @UC-202 Recibir emails por webhook",
+          "file": "us02-bandeja.spec.ts",
+          "line": 60,
+          "column": 6,
+          "specs": [
+            {
+              "title": "AC-12 un correo entrante responde 200 en menos de 2 s y aparece con remitente y asunto",
+              "ok": true,
+              "tags": [
+                "US-02",
+                "UC-202"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 178,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:00.559Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8689dbb8ffe426c2435-4c5e00c9aa05569c505a",
+              "file": "us02-bandeja.spec.ts",
+              "line": 71,
+              "column": 7
+            },
+            {
+              "title": "AC-13 sin token se responde 401 y no se guarda; el mismo identificador dos veces deja una entrada",
+              "ok": true,
+              "tags": [
+                "US-02",
+                "UC-202"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:00.741Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8689dbb8ffe426c2435-3de3b59911bc7df05ebc",
+              "file": "us02-bandeja.spec.ts",
+              "line": 86,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "@US-02 @UC-203 Simular mensajes",
+          "file": "us02-bandeja.spec.ts",
+          "line": 98,
+          "column": 6,
+          "specs": [
+            {
+              "title": "AC-14 el simulador envía por el mismo webhook y el mensaje aparece con «Simulado» en menos de 5 s",
+              "ok": true,
+              "tags": [
+                "US-02",
+                "UC-203"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 296,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:00.758Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8689dbb8ffe426c2435-87cd69df4f1e5f8842c0",
+              "file": "us02-bandeja.spec.ts",
+              "line": 99,
+              "column": 7
+            },
+            {
+              "title": "AC-15 la conversación simulada muestra mensajes y respuestas en orden y se actualiza sin recargar",
+              "ok": true,
+              "tags": [
+                "US-02",
+                "UC-203"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4463,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:01.057Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8689dbb8ffe426c2435-8c2fa1e4e6a3a583bf10",
+              "file": "us02-bandeja.spec.ts",
+              "line": 115,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "@US-02 @UC-204 Consultar la bandeja",
+          "file": "us02-bandeja.spec.ts",
+          "line": 135,
+          "column": 6,
+          "specs": [
+            {
+              "title": "AC-16 la bandeja lista ambos canales del más reciente al más antiguo con canal, contacto, extracto, hora y estado",
+              "ok": true,
+              "tags": [
+                "US-02",
+                "UC-204"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1331,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:05.523Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8689dbb8ffe426c2435-149c1aba6da53e7f6ea2",
+              "file": "us02-bandeja.spec.ts",
+              "line": 136,
+              "column": 7
+            },
+            {
+              "title": "AC-17 la bandeja filtra por canal y estado y muestra cuántos mensajes requieren revisión",
+              "ok": true,
+              "tags": [
+                "US-02",
+                "UC-204"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2143,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:06.858Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8689dbb8ffe426c2435-d84db0e9529794d1bd9f",
+              "file": "us02-bandeja.spec.ts",
+              "line": 160,
+              "column": 7
+            },
+            {
+              "title": "AC-18 al abrir un mensaje se ve el texto completo, el historial y el borrador con sus citas",
+              "ok": true,
+              "tags": [
+                "US-02",
+                "UC-204"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6619,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:09.004Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8689dbb8ffe426c2435-3644a588b038fba80919",
+              "file": "us02-bandeja.spec.ts",
+              "line": 178,
+              "column": 7
+            },
+            {
+              "title": "AC-19 un mensaje nuevo aparece en la bandeja abierta sin recargar en menos de 10 s",
+              "ok": true,
+              "tags": [
+                "US-02",
+                "UC-204"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 174,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:15.628Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b8689dbb8ffe426c2435-d4cf053b93c3ce7f6a26",
+              "file": "us02-bandeja.spec.ts",
+              "line": 196,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "us03-borradores.spec.ts",
+      "file": "us03-borradores.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@US-03 @UC-301 Redactar el borrador citando los documentos",
+          "file": "us03-borradores.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "AC-20 «¿Cuánto cuesta una sesión?» queda en «Borrador listo» en menos de 15 s con 40 € y una cita a las tarifas",
+              "ok": true,
+              "tags": [
+                "US-03",
+                "UC-301"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 379,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:15.810Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0755a7a9dadfa7a8443c-e3ce04ea3950e1ffe9a6",
+              "file": "us03-borradores.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "AC-21 una cifra que no está en los fragmentos citados manda el mensaje a revisión",
+              "ok": true,
+              "tags": [
+                "US-03",
+                "UC-301"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1197,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:16.193Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0755a7a9dadfa7a8443c-4340b4f911e55c74049b",
+              "file": "us03-borradores.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "AC-22 el borrador se redacta en el idioma del mensaje",
+              "ok": true,
+              "tags": [
+                "US-03",
+                "UC-301"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 936,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:17.394Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0755a7a9dadfa7a8443c-ef0486efe6f54f56eecd",
+              "file": "us03-borradores.spec.ts",
+              "line": 34,
+              "column": 7
+            },
+            {
+              "title": "AC-23 al pulsar una cita se ve el documento, su categoría y el fragmento con el texto citado resaltado",
+              "ok": true,
+              "tags": [
+                "US-03",
+                "UC-301"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1189,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:18.334Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0755a7a9dadfa7a8443c-bc81c68460ebc8494e69",
+              "file": "us03-borradores.spec.ts",
+              "line": 46,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "@US-03 @UC-302 Pasar a una persona lo que no está claro",
+          "file": "us03-borradores.spec.ts",
+          "line": 60,
+          "column": 6,
+          "specs": [
+            {
+              "title": "AC-24 una pregunta sin respuesta en los documentos va a revisión sin datos",
+              "ok": true,
+              "tags": [
+                "US-03",
+                "UC-302"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 661,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:19.527Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0755a7a9dadfa7a8443c-76620017e8404b8495a7",
+              "file": "us03-borradores.spec.ts",
+              "line": 61,
+              "column": 7
+            },
+            {
+              "title": "AC-25 una consulta clínica va a revisión como «Consulta clínica», también con el envío automático activado",
+              "ok": true,
+              "tags": [
+                "US-03",
+                "UC-302"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 911,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:20.193Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0755a7a9dadfa7a8443c-e5a282dbfad330470bc6",
+              "file": "us03-borradores.spec.ts",
+              "line": 71,
+              "column": 7
+            },
+            {
+              "title": "AC-26 si falla la generación, el mensaje pasa a revisión con «Reintentar», que vuelve a lanzarla",
+              "ok": true,
+              "tags": [
+                "US-03",
+                "UC-302"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6182,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:21.107Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0755a7a9dadfa7a8443c-e2d99bcb347e9a4dc916",
+              "file": "us03-borradores.spec.ts",
+              "line": 84,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "us04-revision.spec.ts",
+      "file": "us04-revision.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@US-04 @UC-401 Revisar, editar y aprobar respuestas",
+          "file": "us04-revision.spec.ts",
+          "line": 16,
+          "column": 6,
+          "specs": [
+            {
+              "title": "AC-27 al editar y aprobar, el mensaje pasa a «Enviado» y la respuesta queda registrada",
+              "ok": true,
+              "tags": [
+                "US-04",
+                "UC-401"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1290,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:27.296Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c4aed9b5df4acd1b01f-2ebe1a5988f3a39d50ee",
+              "file": "us04-revision.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "AC-28 en un mensaje en revisión se puede escribir la respuesta desde cero y enviarla",
+              "ok": true,
+              "tags": [
+                "US-04",
+                "UC-401"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1264,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:28.590Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c4aed9b5df4acd1b01f-aedde9400d7e938b33a6",
+              "file": "us04-revision.spec.ts",
+              "line": 34,
+              "column": 7
+            },
+            {
+              "title": "AC-29 se puede descartar sin responder y reabrir después al estado anterior",
+              "ok": true,
+              "tags": [
+                "US-04",
+                "UC-401"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 762,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:29.859Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c4aed9b5df4acd1b01f-72bbc03869b835e5dc94",
+              "file": "us04-revision.spec.ts",
+              "line": 45,
+              "column": 7
+            },
+            {
+              "title": "AC-30 cada respuesta queda marcada y la bandeja muestra el % aprobadas sin cambios en 7 días",
+              "ok": true,
+              "tags": [
+                "US-04",
+                "UC-401"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1231,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:30.625Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c4aed9b5df4acd1b01f-0aaf3afae0d49f73ee1e",
+              "file": "us04-revision.spec.ts",
+              "line": 57,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "@US-04 @UC-402 Activar el envío automático",
+          "file": "us04-revision.spec.ts",
+          "line": 73,
+          "column": 6,
+          "specs": [
+            {
+              "title": "AC-31 desactivado al empezar; al activarlo, un borrador respaldado se envía solo en menos de 30 s",
+              "ok": true,
+              "tags": [
+                "US-04",
+                "UC-402"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2258,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:31.859Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c4aed9b5df4acd1b01f-0ccf77b5421f5800e3db",
+              "file": "us04-revision.spec.ts",
+              "line": 76,
+              "column": 7
+            },
+            {
+              "title": "AC-32 con el envío automático, un mensaje en revisión recibe una sola vez el aviso de recepción",
+              "ok": true,
+              "tags": [
+                "US-04",
+                "UC-402"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1992,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:34.121Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c4aed9b5df4acd1b01f-77d49998ece6cc88303b",
+              "file": "us04-revision.spec.ts",
+              "line": 94,
+              "column": 7
+            },
+            {
+              "title": "AC-33 al desactivarlo, el siguiente mensaje queda pendiente de aprobación",
+              "ok": true,
+              "tags": [
+                "US-04",
+                "UC-402"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1133,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:36.117Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c4aed9b5df4acd1b01f-7b6ebfb32c551ad789c1",
+              "file": "us04-revision.spec.ts",
+              "line": 105,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "us05-acceso.spec.ts",
+      "file": "us05-acceso.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@US-05 @UC-501 Proteger el acceso al panel",
+          "file": "us05-acceso.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "AC-34 sin sesión, las pantallas llevan al inicio de sesión y la API responde 401, salvo webhooks y estado",
+              "ok": true,
+              "tags": [
+                "US-05",
+                "UC-501"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 223,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:37.257Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3f739da3827f70655199-745aa20c7230d05ab9c2",
+              "file": "us05-acceso.spec.ts",
+              "line": 7,
+              "column": 7
+            },
+            {
+              "title": "AC-35 con la clave correcta se entra con una sesión de 7 días; con una incorrecta se ve un error",
+              "ok": true,
+              "tags": [
+                "US-05",
+                "UC-501"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 248,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:37.483Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3f739da3827f70655199-28a77e678e889b054766",
+              "file": "us05-acceso.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "AC-35 tras 5 intentos fallidos en un minuto hay que esperar 60 segundos",
+              "ok": true,
+              "tags": [
+                "US-05",
+                "UC-501"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 25,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:37.735Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3f739da3827f70655199-f48878ee35cead5c5e19",
+              "file": "us05-acceso.spec.ts",
+              "line": 38,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "@US-05 @UC-502 Ejecutar en local y desplegar en un contenedor",
+          "file": "us05-acceso.spec.ts",
+          "line": 50,
+          "column": 6,
+          "specs": [
+            {
+              "title": "AC-38 la comprobación de estado responde 200 con status ok",
+              "ok": true,
+              "tags": [
+                "US-05",
+                "UC-502"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "acceptance",
+                  "projectName": "acceptance",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T18:47:37.763Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3f739da3827f70655199-69a7ccf4ed1dbb68b2d1",
+              "file": "us05-acceso.spec.ts",
+              "line": 51,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-23T18:46:50.078Z",
+    "duration": 48079.773,
+    "expected": 44,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

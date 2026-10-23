@@ -24,7 +24,7 @@
     "id": "item-f79f5a67",
     "name": "US-01: Documentos de la clínica",
     "description": "# US-01: Documentos de la clínica\n\n**Horas estimadas:** 10.0\n**Pantallas:** Documentos\n\nComo dueño/a de la clínica, quiero subir y mantener al día mis documentos, para que las respuestas usen siempre mis datos reales.",
-    "state": "user_stories",
+    "state": "review",
     "parent_id": null,
     "labels": [
       "US"
@@ -40,13 +40,13 @@
     "created_at": "2026-10-23T17:12:14.558926+00:00",
     "external_source": "",
     "external_id": "",
-    "updated_at": "2026-10-23T17:12:14.563738+00:00"
+    "updated_at": "2026-10-23T18:52:41.726547+00:00"
   },
   {
     "id": "item-b8f808c3",
     "name": "UC-101: Subir documentos",
     "description": "# UC-101: Subir documentos\n\n**User Story:** US-01: Documentos de la clínica\n**Actor:** dueño/a o recepción (ICP-1, ICP-2)\n**Horas estimadas:** 6.0\n**Pantallas:** Documentos\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.1] Dada la pantalla Documentos, cuando la persona sube un archivo PDF, DOCX, TXT o Markdown de hasta 10 MB, entonces el documento aparece en la lista con su nombre, categoría, fecha de subida y estado «Listo» en menos de 30 segundos.\n- AC-02: [JR-F1.1] Cuando la persona intenta subir un archivo de otro formato o de más de 10 MB, entonces la subida se rechaza con un mensaje que indica el motivo y el archivo no aparece en la lista.\n- AC-03: [JR-F1.1] Al subir un documento se elige una categoría (Tarifas, Horarios, Políticas, Preguntas frecuentes u Otros); la lista muestra la categoría y permite filtrar por ella.\n- AC-04: [JE-F1.1] Si un PDF no contiene texto extraíble, el documento queda en estado «Sin texto», se muestra un aviso para subir una versión con texto y ese documento no se usa para redactar respuestas.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "review",
     "parent_id": "item-f79f5a67",
     "labels": [
       "UC",
@@ -64,13 +64,14 @@
     },
     "created_at": "2026-10-23T17:12:14.568732+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:52:41.654728+00:00"
   },
   {
     "id": "ac-9b402526",
     "name": "[AC-01] [JR-F1.1] Dada la pantalla Documentos, cuando la persona sube un archivo PDF, DOCX, TXT o Markdown de hasta 10 MB, entonces el documento aparece en la lista con su nombre, categoría, fecha de subida y estado «Listo» en menos de 30 segundos.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-b8f808c3",
     "labels": [
       "AC"
@@ -80,13 +81,14 @@
       "ac_id": "AC-01",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.573730+00:00"
+    "created_at": "2026-10-23T17:12:14.573730+00:00",
+    "updated_at": "2026-10-23T18:52:41.588616+00:00"
   },
   {
     "id": "ac-e8aca4e9",
     "name": "[AC-02] [JR-F1.1] Cuando la persona intenta subir un archivo de otro formato o de más de 10 MB, entonces la subida se rechaza con un mensaje que indica el motivo y el archivo no aparece en la lista.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-b8f808c3",
     "labels": [
       "AC"
@@ -96,13 +98,14 @@
       "ac_id": "AC-02",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.573730+00:00"
+    "created_at": "2026-10-23T17:12:14.573730+00:00",
+    "updated_at": "2026-10-23T18:52:41.602190+00:00"
   },
   {
     "id": "ac-e6689f6c",
     "name": "[AC-03] [JR-F1.1] Al subir un documento se elige una categoría (Tarifas, Horarios, Políticas, Preguntas frecuentes u Otros); la lista muestra la categoría y permite filtrar por ella.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-b8f808c3",
     "labels": [
       "AC"
@@ -112,13 +115,14 @@
       "ac_id": "AC-03",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.573730+00:00"
+    "created_at": "2026-10-23T17:12:14.573730+00:00",
+    "updated_at": "2026-10-23T18:52:41.619580+00:00"
   },
   {
     "id": "ac-1ad83c19",
     "name": "[AC-04] [JE-F1.1] Si un PDF no contiene texto extraíble, el documento queda en estado «Sin texto», se muestra un aviso para subir una versión con texto y ese documento no se usa para redactar respuestas.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-b8f808c3",
     "labels": [
       "AC"
@@ -128,13 +132,14 @@
       "ac_id": "AC-04",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.573730+00:00"
+    "created_at": "2026-10-23T17:12:14.573730+00:00",
+    "updated_at": "2026-10-23T18:52:41.638724+00:00"
   },
   {
     "id": "item-57676cd8",
     "name": "UC-102: Mantener los documentos al día",
     "description": "# UC-102: Mantener los documentos al día\n\n**User Story:** US-01: Documentos de la clínica\n**Actor:** dueño/a o recepción (ICP-1, ICP-2)\n**Horas estimadas:** 4.0\n**Pantallas:** Documentos\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.3] Dado un documento de tarifas que indica «Sesión de fisioterapia: 40 €», cuando la persona lo reemplaza por una versión que indica «45 €», entonces el siguiente borrador que pregunte por el precio de la sesión dice 45 € y no menciona 40 €.\n- AC-02: [JR-F1.3] Cuando la persona elimina un documento tras confirmar el aviso, el documento desaparece de la lista y ningún borrador generado después lo cita.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "review",
     "parent_id": "item-f79f5a67",
     "labels": [
       "UC",
@@ -152,13 +157,14 @@
     },
     "created_at": "2026-10-23T17:12:14.579732+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:52:41.706035+00:00"
   },
   {
     "id": "ac-d1eb6cb2",
     "name": "[AC-01] [JR-F1.3] Dado un documento de tarifas que indica «Sesión de fisioterapia: 40 €», cuando la persona lo reemplaza por una versión que indica «45 €», entonces el siguiente borrador que pregunte por el precio de la sesión dice 45 € y no menciona 40 €.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-57676cd8",
     "labels": [
       "AC"
@@ -168,13 +174,14 @@
       "ac_id": "AC-01",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.584735+00:00"
+    "created_at": "2026-10-23T17:12:14.584735+00:00",
+    "updated_at": "2026-10-23T18:52:41.677328+00:00"
   },
   {
     "id": "ac-07b6d630",
     "name": "[AC-02] [JR-F1.3] Cuando la persona elimina un documento tras confirmar el aviso, el documento desaparece de la lista y ningún borrador generado después lo cita.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-57676cd8",
     "labels": [
       "AC"
@@ -184,13 +191,14 @@
       "ac_id": "AC-02",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.584735+00:00"
+    "created_at": "2026-10-23T17:12:14.584735+00:00",
+    "updated_at": "2026-10-23T18:52:41.689839+00:00"
   },
   {
     "id": "item-f3721621",
     "name": "US-02: Bandeja única de mensajes",
     "description": "# US-02: Bandeja única de mensajes\n\n**Horas estimadas:** 23.0\n**Pantallas:** Bandeja, Detalle de mensaje, Simulador\n\nComo persona de recepción, quiero ver en un solo sitio los mensajes de WhatsApp y email, para no ir saltando entre aplicaciones.",
-    "state": "user_stories",
+    "state": "review",
     "parent_id": null,
     "labels": [
       "US"
@@ -206,13 +214,13 @@
     "created_at": "2026-10-23T17:12:14.590735+00:00",
     "external_source": "",
     "external_id": "",
-    "updated_at": "2026-10-23T17:12:14.596732+00:00"
+    "updated_at": "2026-10-23T18:52:42.022447+00:00"
   },
   {
     "id": "item-db4c27b7",
     "name": "UC-201: Recibir mensajes de WhatsApp por webhook",
     "description": "# UC-201: Recibir mensajes de WhatsApp por webhook\n\n**User Story:** US-02: Bandeja única de mensajes\n**Actor:** sistema (WhatsApp Cloud API)\n**Horas estimadas:** 6.0\n**Pantallas:** \n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.1] Cuando llega la petición de verificación de WhatsApp Cloud API con el token de verificación configurado, el webhook responde con el valor de `hub.challenge`; con un token distinto responde con estado 403.\n- AC-02: [JR-F1.1] Cuando llega un mensaje de texto con el formato de WhatsApp Cloud API, el webhook responde con estado 200 en menos de 2 segundos y el mensaje aparece en la bandeja con canal WhatsApp, número, nombre del contacto, texto y hora de recepción.\n- AC-03: [JR-F1.2] Si el mismo mensaje (mismo identificador de WhatsApp) llega dos veces, la bandeja muestra una sola entrada.\n- AC-04: [JE-F1.1] Si la instalación tiene activada la verificación de firma de WhatsApp y la firma de la petición no coincide, el webhook responde con estado 401 y no guarda el mensaje.\n- AC-05: [JR-F1.4] Cuando llega un mensaje que no es de texto (imagen, audio, documento), aparece en la bandeja con la nota «Tipo de mensaje no soportado» y en estado «Requiere revisión».\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "review",
     "parent_id": "item-f3721621",
     "labels": [
       "UC",
@@ -230,13 +238,14 @@
     },
     "created_at": "2026-10-23T17:12:14.601234+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:52:41.822227+00:00"
   },
   {
     "id": "ac-879aa56a",
     "name": "[AC-01] [JR-F1.1] Cuando llega la petición de verificación de WhatsApp Cloud API con el token de verificación configurado, el webhook responde con el valor de `hub.challenge`; con un token distinto responde con estado 403.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-db4c27b7",
     "labels": [
       "AC"
@@ -246,13 +255,14 @@
       "ac_id": "AC-01",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.607240+00:00"
+    "created_at": "2026-10-23T17:12:14.607240+00:00",
+    "updated_at": "2026-10-23T18:52:41.741646+00:00"
   },
   {
     "id": "ac-33659611",
     "name": "[AC-02] [JR-F1.1] Cuando llega un mensaje de texto con el formato de WhatsApp Cloud API, el webhook responde con estado 200 en menos de 2 segundos y el mensaje aparece en la bandeja con canal WhatsApp, número, nombre del contacto, texto y hora de recepción.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-db4c27b7",
     "labels": [
       "AC"
@@ -262,13 +272,14 @@
       "ac_id": "AC-02",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.607240+00:00"
+    "created_at": "2026-10-23T17:12:14.607240+00:00",
+    "updated_at": "2026-10-23T18:52:41.755352+00:00"
   },
   {
     "id": "ac-023e5c19",
     "name": "[AC-03] [JR-F1.2] Si el mismo mensaje (mismo identificador de WhatsApp) llega dos veces, la bandeja muestra una sola entrada.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-db4c27b7",
     "labels": [
       "AC"
@@ -278,13 +289,14 @@
       "ac_id": "AC-03",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.607240+00:00"
+    "created_at": "2026-10-23T17:12:14.607240+00:00",
+    "updated_at": "2026-10-23T18:52:41.768785+00:00"
   },
   {
     "id": "ac-71e0583b",
     "name": "[AC-04] [JE-F1.1] Si la instalación tiene activada la verificación de firma de WhatsApp y la firma de la petición no coincide, el webhook responde con estado 401 y no guarda el mensaje.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-db4c27b7",
     "labels": [
       "AC"
@@ -294,13 +306,14 @@
       "ac_id": "AC-04",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.607240+00:00"
+    "created_at": "2026-10-23T17:12:14.607240+00:00",
+    "updated_at": "2026-10-23T18:52:41.785834+00:00"
   },
   {
     "id": "ac-ca5baba7",
     "name": "[AC-05] [JR-F1.4] Cuando llega un mensaje que no es de texto (imagen, audio, documento), aparece en la bandeja con la nota «Tipo de mensaje no soportado» y en estado «Requiere revisión».",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-db4c27b7",
     "labels": [
       "AC"
@@ -310,13 +323,14 @@
       "ac_id": "AC-05",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.607240+00:00"
+    "created_at": "2026-10-23T17:12:14.607240+00:00",
+    "updated_at": "2026-10-23T18:52:41.800608+00:00"
   },
   {
     "id": "item-d1873b64",
     "name": "UC-202: Recibir emails por webhook",
     "description": "# UC-202: Recibir emails por webhook\n\n**User Story:** US-02: Bandeja única de mensajes\n**Actor:** sistema (proveedor de correo entrante)\n**Horas estimadas:** 4.0\n**Pantallas:** \n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.1] Cuando llega un correo entrante con remitente, asunto, cuerpo de texto e identificador de mensaje, el webhook responde con estado 200 en menos de 2 segundos y el mensaje aparece en la bandeja con canal Email, remitente, asunto, texto y hora de recepción.\n- AC-02: [JE-F1.1] Si la petición no incluye el token del webhook de correo configurado en el servidor, se responde con estado 401 y no se guarda nada; si llega dos veces el mismo identificador de mensaje, la bandeja muestra una sola entrada.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "review",
     "parent_id": "item-f3721621",
     "labels": [
       "UC",
@@ -334,13 +348,14 @@
     },
     "created_at": "2026-10-23T17:12:14.613851+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:52:41.866997+00:00"
   },
   {
     "id": "ac-a0d741e5",
     "name": "[AC-01] [JR-F1.1] Cuando llega un correo entrante con remitente, asunto, cuerpo de texto e identificador de mensaje, el webhook responde con estado 200 en menos de 2 segundos y el mensaje aparece en la bandeja con canal Email, remitente, asunto, texto y hora de recepción.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-d1873b64",
     "labels": [
       "AC"
@@ -350,13 +365,14 @@
       "ac_id": "AC-01",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.620121+00:00"
+    "created_at": "2026-10-23T17:12:14.620121+00:00",
+    "updated_at": "2026-10-23T18:52:41.842908+00:00"
   },
   {
     "id": "ac-6f47b5e7",
     "name": "[AC-02] [JE-F1.1] Si la petición no incluye el token del webhook de correo configurado en el servidor, se responde con estado 401 y no se guarda nada; si llega dos veces el mismo identificador de mensaje, la bandeja muestra una sola entrada.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-d1873b64",
     "labels": [
       "AC"
@@ -366,13 +382,14 @@
       "ac_id": "AC-02",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.620121+00:00"
+    "created_at": "2026-10-23T17:12:14.620121+00:00",
+    "updated_at": "2026-10-23T18:52:41.854419+00:00"
   },
   {
     "id": "item-2f0910b6",
     "name": "UC-203: Simular mensajes",
     "description": "# UC-203: Simular mensajes\n\n**User Story:** US-02: Bandeja única de mensajes\n**Actor:** recepción o quien hace la demo (ICP-2)\n**Horas estimadas:** 5.0\n**Pantallas:** Simulador\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.1] Dada la pantalla Simulador, cuando la persona elige canal (WhatsApp o Email), escribe un contacto y un texto y pulsa Enviar, entonces el mensaje entra por el mismo webhook que un mensaje real y aparece en la bandeja en menos de 5 segundos con la etiqueta «Simulado».\n- AC-02: [JR-F1.2] El simulador muestra la conversación de cada contacto simulado con los mensajes enviados y las respuestas marcadas como enviadas, en orden cronológico, y se actualiza sin recargar la página en menos de 10 segundos.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "review",
     "parent_id": "item-f3721621",
     "labels": [
       "UC",
@@ -390,13 +407,14 @@
     },
     "created_at": "2026-10-23T17:12:14.625635+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:52:41.917824+00:00"
   },
   {
     "id": "ac-d86761af",
     "name": "[AC-01] [JR-F1.1] Dada la pantalla Simulador, cuando la persona elige canal (WhatsApp o Email), escribe un contacto y un texto y pulsa Enviar, entonces el mensaje entra por el mismo webhook que un mensaje real y aparece en la bandeja en menos de 5 segundos con la etiqueta «Simulado».",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-2f0910b6",
     "labels": [
       "AC"
@@ -406,13 +424,14 @@
       "ac_id": "AC-01",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.632635+00:00"
+    "created_at": "2026-10-23T17:12:14.632635+00:00",
+    "updated_at": "2026-10-23T18:52:41.885786+00:00"
   },
   {
     "id": "ac-0ee25de8",
     "name": "[AC-02] [JR-F1.2] El simulador muestra la conversación de cada contacto simulado con los mensajes enviados y las respuestas marcadas como enviadas, en orden cronológico, y se actualiza sin recargar la página en menos de 10 segundos.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-2f0910b6",
     "labels": [
       "AC"
@@ -422,13 +441,14 @@
       "ac_id": "AC-02",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.632635+00:00"
+    "created_at": "2026-10-23T17:12:14.632635+00:00",
+    "updated_at": "2026-10-23T18:52:41.902448+00:00"
   },
   {
     "id": "item-0ba8b9da",
     "name": "UC-204: Consultar la bandeja",
     "description": "# UC-204: Consultar la bandeja\n\n**User Story:** US-02: Bandeja única de mensajes\n**Actor:** recepción (ICP-2)\n**Horas estimadas:** 8.0\n**Pantallas:** Bandeja, Detalle de mensaje\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.1] La bandeja lista los mensajes de ambos canales del más reciente al más antiguo; cada fila muestra el icono del canal, el contacto, los primeros 100 caracteres del texto, la hora y el estado (Nuevo, Borrador listo, Requiere revisión, Enviado, Descartado).\n- AC-02: [JR-F1.4] La bandeja permite filtrar por canal y por estado, y muestra en todo momento el número de mensajes en «Requiere revisión».\n- AC-03: [JR-F1.5] Al abrir un mensaje se ve su texto completo, el historial de mensajes y respuestas con ese contacto y el borrador propuesto con sus citas.\n- AC-04: [JE-F1.2] Un mensaje nuevo aparece en la bandeja abierta sin recargar la página en menos de 10 segundos desde que llega.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "review",
     "parent_id": "item-f3721621",
     "labels": [
       "UC",
@@ -446,13 +466,14 @@
     },
     "created_at": "2026-10-23T17:12:14.639635+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:52:42.003127+00:00"
   },
   {
     "id": "ac-2d4f62a9",
     "name": "[AC-01] [JR-F1.1] La bandeja lista los mensajes de ambos canales del más reciente al más antiguo; cada fila muestra el icono del canal, el contacto, los primeros 100 caracteres del texto, la hora y el estado (Nuevo, Borrador listo, Requiere revisión, Enviado, Descartado).",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-0ba8b9da",
     "labels": [
       "AC"
@@ -462,13 +483,14 @@
       "ac_id": "AC-01",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.648635+00:00"
+    "created_at": "2026-10-23T17:12:14.648635+00:00",
+    "updated_at": "2026-10-23T18:52:41.940911+00:00"
   },
   {
     "id": "ac-56690b95",
     "name": "[AC-02] [JR-F1.4] La bandeja permite filtrar por canal y por estado, y muestra en todo momento el número de mensajes en «Requiere revisión».",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-0ba8b9da",
     "labels": [
       "AC"
@@ -478,13 +500,14 @@
       "ac_id": "AC-02",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.648635+00:00"
+    "created_at": "2026-10-23T17:12:14.648635+00:00",
+    "updated_at": "2026-10-23T18:52:41.958862+00:00"
   },
   {
     "id": "ac-29808f04",
     "name": "[AC-03] [JR-F1.5] Al abrir un mensaje se ve su texto completo, el historial de mensajes y respuestas con ese contacto y el borrador propuesto con sus citas.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-0ba8b9da",
     "labels": [
       "AC"
@@ -494,13 +517,14 @@
       "ac_id": "AC-03",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.648635+00:00"
+    "created_at": "2026-10-23T17:12:14.648635+00:00",
+    "updated_at": "2026-10-23T18:52:41.973543+00:00"
   },
   {
     "id": "ac-6696eb80",
     "name": "[AC-04] [JE-F1.2] Un mensaje nuevo aparece en la bandeja abierta sin recargar la página en menos de 10 segundos desde que llega.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-0ba8b9da",
     "labels": [
       "AC"
@@ -510,13 +534,14 @@
       "ac_id": "AC-04",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.648635+00:00"
+    "created_at": "2026-10-23T17:12:14.648635+00:00",
+    "updated_at": "2026-10-23T18:52:41.987613+00:00"
   },
   {
     "id": "item-2ff936ee",
     "name": "US-03: Borradores con citas",
     "description": "# US-03: Borradores con citas\n\n**Horas estimadas:** 16.0\n**Pantallas:** Bandeja, Detalle de mensaje\n\nComo persona de recepción, quiero que cada mensaje llegue con una respuesta preparada a partir de los documentos y con sus fuentes, para contestar en segundos sin buscar nada.",
-    "state": "user_stories",
+    "state": "review",
     "parent_id": null,
     "labels": [
       "US"
@@ -532,13 +557,13 @@
     "created_at": "2026-10-23T17:12:14.654991+00:00",
     "external_source": "",
     "external_id": "",
-    "updated_at": "2026-10-23T17:12:14.661607+00:00"
+    "updated_at": "2026-10-23T18:52:42.187560+00:00"
   },
   {
     "id": "item-fc64cbda",
     "name": "UC-301: Redactar el borrador citando los documentos",
     "description": "# UC-301: Redactar el borrador citando los documentos\n\n**User Story:** US-03: Borradores con citas\n**Actor:** sistema (Claude) para la recepción\n**Horas estimadas:** 10.0\n**Pantallas:** Detalle de mensaje\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.1] Dado un documento de tarifas que indica «Sesión de fisioterapia: 40 €», cuando llega el mensaje «¿Cuánto cuesta una sesión?», entonces en menos de 15 segundos el mensaje pasa a «Borrador listo» con un borrador que contiene «40 €» y al menos una cita con el nombre del documento y un fragmento que contiene «40 €».\n- AC-02: [JE-F1.1] Cada precio, hora, fecha o cifra que aparece en un borrador figura también en alguno de sus fragmentos citados; si no es así, el mensaje pasa a «Requiere revisión» con el motivo «Dato no encontrado en los documentos» y no se puede enviar automáticamente.\n- AC-03: [JR-F1.1] El borrador se redacta en el idioma del mensaje recibido: un mensaje en inglés recibe un borrador en inglés y uno en español, un borrador en español.\n- AC-04: [JR-F1.5] Al pulsar una cita del borrador se muestra el nombre del documento, su categoría y el fragmento completo citado, con el texto citado resaltado.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "review",
     "parent_id": "item-2ff936ee",
     "labels": [
       "UC",
@@ -556,13 +581,14 @@
     },
     "created_at": "2026-10-23T17:12:14.666121+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:52:42.102543+00:00"
   },
   {
     "id": "ac-4fd4f5ec",
     "name": "[AC-01] [JR-F1.1] Dado un documento de tarifas que indica «Sesión de fisioterapia: 40 €», cuando llega el mensaje «¿Cuánto cuesta una sesión?», entonces en menos de 15 segundos el mensaje pasa a «Borrador listo» con un borrador que contiene «40 €» y al menos una cita con el nombre del documento y un fragmento que contiene «40 €».",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-fc64cbda",
     "labels": [
       "AC"
@@ -572,13 +598,14 @@
       "ac_id": "AC-01",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.673639+00:00"
+    "created_at": "2026-10-23T17:12:14.673639+00:00",
+    "updated_at": "2026-10-23T18:52:42.038786+00:00"
   },
   {
     "id": "ac-be008131",
     "name": "[AC-02] [JE-F1.1] Cada precio, hora, fecha o cifra que aparece en un borrador figura también en alguno de sus fragmentos citados; si no es así, el mensaje pasa a «Requiere revisión» con el motivo «Dato no encontrado en los documentos» y no se puede enviar automáticamente.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-fc64cbda",
     "labels": [
       "AC"
@@ -588,13 +615,14 @@
       "ac_id": "AC-02",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.673639+00:00"
+    "created_at": "2026-10-23T17:12:14.673639+00:00",
+    "updated_at": "2026-10-23T18:52:42.054050+00:00"
   },
   {
     "id": "ac-016800f0",
     "name": "[AC-03] [JR-F1.1] El borrador se redacta en el idioma del mensaje recibido: un mensaje en inglés recibe un borrador en inglés y uno en español, un borrador en español.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-fc64cbda",
     "labels": [
       "AC"
@@ -604,13 +632,14 @@
       "ac_id": "AC-03",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.673639+00:00"
+    "created_at": "2026-10-23T17:12:14.673639+00:00",
+    "updated_at": "2026-10-23T18:52:42.070598+00:00"
   },
   {
     "id": "ac-1ae9b0da",
     "name": "[AC-04] [JR-F1.5] Al pulsar una cita del borrador se muestra el nombre del documento, su categoría y el fragmento completo citado, con el texto citado resaltado.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-fc64cbda",
     "labels": [
       "AC"
@@ -620,13 +649,14 @@
       "ac_id": "AC-04",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.673639+00:00"
+    "created_at": "2026-10-23T17:12:14.673639+00:00",
+    "updated_at": "2026-10-23T18:52:42.085626+00:00"
   },
   {
     "id": "item-c156dd1d",
     "name": "UC-302: Pasar a una persona lo que no está claro",
     "description": "# UC-302: Pasar a una persona lo que no está claro\n\n**User Story:** US-03: Borradores con citas\n**Actor:** sistema para la recepción\n**Horas estimadas:** 6.0\n**Pantallas:** Detalle de mensaje, Bandeja\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.4] Cuando llega una pregunta cuya respuesta no está en los documentos (por ejemplo «¿Tenéis parking?» sin ninguna mención a parking), el mensaje pasa a «Requiere revisión» con el motivo «No hay información en los documentos» y no se propone ninguna respuesta con datos.\n- AC-02: [JE-F1.3] Cuando un mensaje describe síntomas o pide consejo clínico (por ejemplo «Me duele la rodilla, ¿qué ejercicios hago?»), el mensaje pasa a «Requiere revisión» con el motivo «Consulta clínica», también con el envío automático activado.\n- AC-03: [JR-F1.4] Si la generación del borrador falla o no hay clave de Anthropic configurada, el mensaje pasa a «Requiere revisión» con el motivo «No se pudo generar el borrador» y un botón «Reintentar» que vuelve a lanzar la redacción.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "review",
     "parent_id": "item-2ff936ee",
     "labels": [
       "UC",
@@ -644,13 +674,14 @@
     },
     "created_at": "2026-10-23T17:12:14.681661+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:52:42.168426+00:00"
   },
   {
     "id": "ac-2ec4545b",
     "name": "[AC-01] [JR-F1.4] Cuando llega una pregunta cuya respuesta no está en los documentos (por ejemplo «¿Tenéis parking?» sin ninguna mención a parking), el mensaje pasa a «Requiere revisión» con el motivo «No hay información en los documentos» y no se propone ninguna respuesta con datos.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-c156dd1d",
     "labels": [
       "AC"
@@ -660,13 +691,14 @@
       "ac_id": "AC-01",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.688667+00:00"
+    "created_at": "2026-10-23T17:12:14.688667+00:00",
+    "updated_at": "2026-10-23T18:52:42.126385+00:00"
   },
   {
     "id": "ac-64ef9c30",
     "name": "[AC-02] [JE-F1.3] Cuando un mensaje describe síntomas o pide consejo clínico (por ejemplo «Me duele la rodilla, ¿qué ejercicios hago?»), el mensaje pasa a «Requiere revisión» con el motivo «Consulta clínica», también con el envío automático activado.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-c156dd1d",
     "labels": [
       "AC"
@@ -676,13 +708,14 @@
       "ac_id": "AC-02",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.688667+00:00"
+    "created_at": "2026-10-23T17:12:14.688667+00:00",
+    "updated_at": "2026-10-23T18:52:42.140892+00:00"
   },
   {
     "id": "ac-038b262e",
     "name": "[AC-03] [JR-F1.4] Si la generación del borrador falla o no hay clave de Anthropic configurada, el mensaje pasa a «Requiere revisión» con el motivo «No se pudo generar el borrador» y un botón «Reintentar» que vuelve a lanzar la redacción.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-c156dd1d",
     "labels": [
       "AC"
@@ -692,13 +725,14 @@
       "ac_id": "AC-03",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.688667+00:00"
+    "created_at": "2026-10-23T17:12:14.688667+00:00",
+    "updated_at": "2026-10-23T18:52:42.154513+00:00"
   },
   {
     "id": "item-edd20800",
     "name": "US-04: Revisión y envío",
     "description": "# US-04: Revisión y envío\n\n**Horas estimadas:** 11.0\n**Pantallas:** Ajustes, Detalle de mensaje\n\nComo persona de recepción, quiero decidir qué se envía y poder delegar lo que está respaldado, para tener el control sin escribirlo todo a mano.",
-    "state": "user_stories",
+    "state": "review",
     "parent_id": null,
     "labels": [
       "US"
@@ -714,13 +748,13 @@
     "created_at": "2026-10-23T17:12:14.695674+00:00",
     "external_source": "",
     "external_id": "",
-    "updated_at": "2026-10-23T17:12:14.703186+00:00"
+    "updated_at": "2026-10-23T18:52:42.378613+00:00"
   },
   {
     "id": "item-eb9bea4d",
     "name": "UC-401: Revisar, editar y aprobar respuestas",
     "description": "# UC-401: Revisar, editar y aprobar respuestas\n\n**User Story:** US-04: Revisión y envío\n**Actor:** recepción (ICP-2)\n**Horas estimadas:** 6.0\n**Pantallas:** Detalle de mensaje\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.5] Cuando la persona edita el borrador y pulsa «Aprobar y enviar», el mensaje pasa a «Enviado», el texto final aparece en el historial del contacto con la hora de envío y queda registrado en el registro de envíos con canal, destinatario y texto.\n- AC-02: [JE-F1.3] En un mensaje en «Requiere revisión» la persona puede escribir la respuesta desde cero y enviarla; el envío queda registrado igual que en AC-27.\n- AC-03: [JR-F1.5] La persona puede descartar un mensaje sin responder (pasa a «Descartado») y reabrirlo después (vuelve a su estado anterior).\n- AC-04: [JE-F1.3] Cada respuesta enviada queda marcada como «Aprobada sin cambios», «Editada» o «Escrita a mano», y la bandeja muestra el porcentaje de respuestas aprobadas sin cambios de los últimos 7 días.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "review",
     "parent_id": "item-edd20800",
     "labels": [
       "UC",
@@ -738,13 +772,14 @@
     },
     "created_at": "2026-10-23T17:12:14.708183+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:52:42.282242+00:00"
   },
   {
     "id": "ac-6f290e1d",
     "name": "[AC-01] [JR-F1.5] Cuando la persona edita el borrador y pulsa «Aprobar y enviar», el mensaje pasa a «Enviado», el texto final aparece en el historial del contacto con la hora de envío y queda registrado en el registro de envíos con canal, destinatario y texto.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-eb9bea4d",
     "labels": [
       "AC"
@@ -754,13 +789,14 @@
       "ac_id": "AC-01",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.715696+00:00"
+    "created_at": "2026-10-23T17:12:14.715696+00:00",
+    "updated_at": "2026-10-23T18:52:42.209966+00:00"
   },
   {
     "id": "ac-6c373932",
     "name": "[AC-02] [JE-F1.3] En un mensaje en «Requiere revisión» la persona puede escribir la respuesta desde cero y enviarla; el envío queda registrado igual que en AC-27.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-eb9bea4d",
     "labels": [
       "AC"
@@ -770,13 +806,14 @@
       "ac_id": "AC-02",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.715696+00:00"
+    "created_at": "2026-10-23T17:12:14.715696+00:00",
+    "updated_at": "2026-10-23T18:52:42.226195+00:00"
   },
   {
     "id": "ac-ecb209fa",
     "name": "[AC-03] [JR-F1.5] La persona puede descartar un mensaje sin responder (pasa a «Descartado») y reabrirlo después (vuelve a su estado anterior).",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-eb9bea4d",
     "labels": [
       "AC"
@@ -786,13 +823,14 @@
       "ac_id": "AC-03",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.715696+00:00"
+    "created_at": "2026-10-23T17:12:14.715696+00:00",
+    "updated_at": "2026-10-23T18:52:42.242314+00:00"
   },
   {
     "id": "ac-3eb984ea",
     "name": "[AC-04] [JE-F1.3] Cada respuesta enviada queda marcada como «Aprobada sin cambios», «Editada» o «Escrita a mano», y la bandeja muestra el porcentaje de respuestas aprobadas sin cambios de los últimos 7 días.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-eb9bea4d",
     "labels": [
       "AC"
@@ -802,13 +840,14 @@
       "ac_id": "AC-04",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.715696+00:00"
+    "created_at": "2026-10-23T17:12:14.715696+00:00",
+    "updated_at": "2026-10-23T18:52:42.259600+00:00"
   },
   {
     "id": "item-85e34c8a",
     "name": "UC-402: Activar el envío automático",
     "description": "# UC-402: Activar el envío automático\n\n**User Story:** US-04: Revisión y envío\n**Actor:** dueño/a de la clínica (ICP-1)\n**Horas estimadas:** 5.0\n**Pantallas:** Ajustes\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.2] El envío automático está desactivado en una instalación nueva; al activarlo, cada borrador respaldado por los documentos y sin motivo de revisión se envía en menos de 30 segundos desde la recepción y queda marcado como «Enviado automáticamente».\n- AC-02: [JE-F1.2] Con el envío automático activado, un mensaje en «Requiere revisión» no recibe respuesta automática con datos; en su lugar el contacto recibe una sola vez el aviso de recepción configurable (por defecto: «Hemos recibido tu mensaje. Una persona del equipo te responderá lo antes posible.»).\n- AC-03: [JE-F1.3] Al desactivar el envío automático, el siguiente mensaje que llega queda en «Borrador listo» o «Requiere revisión» y no se envía nada sin aprobación.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "review",
     "parent_id": "item-edd20800",
     "labels": [
       "UC",
@@ -826,13 +865,14 @@
     },
     "created_at": "2026-10-23T17:12:14.722737+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:52:42.354325+00:00"
   },
   {
     "id": "ac-900bacb0",
     "name": "[AC-01] [JR-F1.2] El envío automático está desactivado en una instalación nueva; al activarlo, cada borrador respaldado por los documentos y sin motivo de revisión se envía en menos de 30 segundos desde la recepción y queda marcado como «Enviado automáticamente».",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-85e34c8a",
     "labels": [
       "AC"
@@ -842,13 +882,14 @@
       "ac_id": "AC-01",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.730958+00:00"
+    "created_at": "2026-10-23T17:12:14.730958+00:00",
+    "updated_at": "2026-10-23T18:52:42.308538+00:00"
   },
   {
     "id": "ac-8c7a32d1",
     "name": "[AC-02] [JE-F1.2] Con el envío automático activado, un mensaje en «Requiere revisión» no recibe respuesta automática con datos; en su lugar el contacto recibe una sola vez el aviso de recepción configurable (por defecto: «Hemos recibido tu mensaje. Una persona del equipo te responderá lo antes posible.»).",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-85e34c8a",
     "labels": [
       "AC"
@@ -858,13 +899,14 @@
       "ac_id": "AC-02",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.730958+00:00"
+    "created_at": "2026-10-23T17:12:14.730958+00:00",
+    "updated_at": "2026-10-23T18:52:42.322548+00:00"
   },
   {
     "id": "ac-2266ea1a",
     "name": "[AC-03] [JE-F1.3] Al desactivar el envío automático, el siguiente mensaje que llega queda en «Borrador listo» o «Requiere revisión» y no se envía nada sin aprobación.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-85e34c8a",
     "labels": [
       "AC"
@@ -874,13 +916,14 @@
       "ac_id": "AC-03",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.730958+00:00"
+    "created_at": "2026-10-23T17:12:14.730958+00:00",
+    "updated_at": "2026-10-23T18:52:42.336078+00:00"
   },
   {
     "id": "item-151c8de5",
     "name": "US-05: Acceso y despliegue",
     "description": "# US-05: Acceso y despliegue\n\n**Horas estimadas:** 7.0\n**Pantallas:** Inicio de sesión\n\nComo dueño/a de la clínica, quiero que el panel esté protegido y que la aplicación se instale con un solo contenedor, para usarla con tranquilidad en mi servidor.",
-    "state": "user_stories",
+    "state": "review",
     "parent_id": null,
     "labels": [
       "US"
@@ -896,13 +939,13 @@
     "created_at": "2026-10-23T17:12:14.738860+00:00",
     "external_source": "",
     "external_id": "",
-    "updated_at": "2026-10-23T17:12:14.746364+00:00"
+    "updated_at": "2026-10-23T18:52:42.514499+00:00"
   },
   {
     "id": "item-4f4f2c90",
     "name": "UC-501: Proteger el acceso al panel",
     "description": "# UC-501: Proteger el acceso al panel\n\n**User Story:** US-05: Acceso y despliegue\n**Actor:** dueño/a o recepción (ICP-1, ICP-2)\n**Horas estimadas:** 3.0\n**Pantallas:** Inicio de sesión\n\n## Criterios de Aceptacion\n- AC-01: [JE-F1.1] Sin sesión iniciada, cualquier pantalla del panel redirige al inicio de sesión y cualquier operación de la aplicación responde con estado 401, salvo los webhooks y la comprobación de estado.\n- AC-02: [JE-F1.1] Con la clave de acceso de administración definida en el servidor se inicia una sesión válida durante 7 días; con una clave incorrecta se muestra un error, y tras 5 intentos fallidos en un minuto hay que esperar 60 segundos para volver a intentarlo.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "review",
     "parent_id": "item-151c8de5",
     "labels": [
       "UC",
@@ -920,13 +963,14 @@
     },
     "created_at": "2026-10-23T17:12:14.751880+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:52:42.430801+00:00"
   },
   {
     "id": "ac-50f58ae9",
     "name": "[AC-01] [JE-F1.1] Sin sesión iniciada, cualquier pantalla del panel redirige al inicio de sesión y cualquier operación de la aplicación responde con estado 401, salvo los webhooks y la comprobación de estado.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-4f4f2c90",
     "labels": [
       "AC"
@@ -936,13 +980,14 @@
       "ac_id": "AC-01",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.759391+00:00"
+    "created_at": "2026-10-23T17:12:14.759391+00:00",
+    "updated_at": "2026-10-23T18:52:42.397621+00:00"
   },
   {
     "id": "ac-108a67b4",
     "name": "[AC-02] [JE-F1.1] Con la clave de acceso de administración definida en el servidor se inicia una sesión válida durante 7 días; con una clave incorrecta se muestra un error, y tras 5 intentos fallidos en un minuto hay que esperar 60 segundos para volver a intentarlo.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-4f4f2c90",
     "labels": [
       "AC"
@@ -952,13 +997,14 @@
       "ac_id": "AC-02",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.759391+00:00"
+    "created_at": "2026-10-23T17:12:14.759391+00:00",
+    "updated_at": "2026-10-23T18:52:42.412774+00:00"
   },
   {
     "id": "item-e5a5c5d0",
     "name": "UC-502: Ejecutar en local y desplegar en un contenedor",
     "description": "# UC-502: Ejecutar en local y desplegar en un contenedor\n\n**User Story:** US-05: Acceso y despliegue\n**Actor:** quien instala la aplicación\n**Horas estimadas:** 4.0\n**Pantallas:** \n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.1] Siguiendo el README, la aplicación arranca en local en el puerto 3000 con un único comando y crea su base de datos vacía automáticamente en el primer arranque.\n- AC-02: [JR-F1.3] La imagen Docker arranca un único contenedor que expone el puerto 3000; un documento subido y un mensaje recibido siguen disponibles después de reiniciar el contenedor con el mismo volumen de datos.\n- AC-03: [JR-F1.2] La comprobación de estado responde con estado 200 y `{\"status\":\"ok\"}` cuando la base de datos está accesible, y con estado 503 cuando no lo está, de modo que Coolify puede usarla para vigilar el contenedor.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "review",
     "parent_id": "item-151c8de5",
     "labels": [
       "UC",
@@ -976,13 +1022,14 @@
     },
     "created_at": "2026-10-23T17:12:14.767842+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:52:42.495369+00:00"
   },
   {
     "id": "ac-586e1540",
     "name": "[AC-01] [JR-F1.1] Siguiendo el README, la aplicación arranca en local en el puerto 3000 con un único comando y crea su base de datos vacía automáticamente en el primer arranque.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-e5a5c5d0",
     "labels": [
       "AC"
@@ -992,13 +1039,14 @@
       "ac_id": "AC-01",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.775850+00:00"
+    "created_at": "2026-10-23T17:12:14.775850+00:00",
+    "updated_at": "2026-10-23T18:52:42.452822+00:00"
   },
   {
     "id": "ac-8df53598",
     "name": "[AC-02] [JR-F1.3] La imagen Docker arranca un único contenedor que expone el puerto 3000; un documento subido y un mensaje recibido siguen disponibles después de reiniciar el contenedor con el mismo volumen de datos.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-e5a5c5d0",
     "labels": [
       "AC"
@@ -1008,13 +1056,14 @@
       "ac_id": "AC-02",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.775850+00:00"
+    "created_at": "2026-10-23T17:12:14.775850+00:00",
+    "updated_at": "2026-10-23T18:52:42.465355+00:00"
   },
   {
     "id": "ac-8e82d6ea",
     "name": "[AC-03] [JR-F1.2] La comprobación de estado responde con estado 200 y `{\"status\":\"ok\"}` cuando la base de datos está accesible, y con estado 503 cuando no lo está, de modo que Coolify puede usarla para vigilar el contenedor.",
     "description": "",
-    "state": "backlog",
+    "state": "done",
     "parent_id": "item-e5a5c5d0",
     "labels": [
       "AC"
@@ -1024,6 +1073,7 @@
       "ac_id": "AC-03",
       "tipo": "AC"
     },
-    "created_at": "2026-10-23T17:12:14.775850+00:00"
+    "created_at": "2026-10-23T17:12:14.775850+00:00",
+    "updated_at": "2026-10-23T18:52:42.479861+00:00"
   }
 ]

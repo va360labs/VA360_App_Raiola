@@ -1,0 +1,11 @@
+{
+  "feature_slug": "respuestas-automaticas",
+  "branch": "feature/respuestas-automaticas",
+  "stack": "nextjs-react-typescript-sqlite",
+  "project_name": "va360-app-raiola",
+  "project_root_absolute": "C:/Users/valen/Documents/Demos/VA360_App_Raiola",
+  "backend_type": "freeform",
+  "plan_path": "doc/plans/respuestas-automaticas_plan.md",
+  "autopilot_level": "equilibrado",
+  "notes": "Sin Stitch ni Claude Design configurados: las pantallas se diseñan en código con el brand kit (decisión del usuario)."
+}

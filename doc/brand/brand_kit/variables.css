@@ -5,7 +5,9 @@
  * Contrastes verificados: texto ≥ 4.5:1, bordes de controles ≥ 3:1.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap');
+/* Fuentes: Atkinson Hyperlegible Next y Atkinson Hyperlegible Mono (Google Fonts).
+ * La aplicación las carga con next/font y sobrescribe --font-* con sus variables;
+ * fuera de la app, cargarlas desde fonts.google.com. */
 
 :root {
   /* === Acción (verde salvia) === */

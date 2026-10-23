@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { requireSession } from "@/lib/auth/guard";
 import { getSetting, setSetting } from "@/lib/settings";
 
 export const runtime = "nodejs";
@@ -19,11 +20,15 @@ const updateSchema = z.object({
   clinicName: z.string().trim().max(80).optional(),
 });
 
-export function GET() {
+export async function GET(request: Request) {
+  const denied = await requireSession(request);
+  if (denied) return denied;
   return NextResponse.json({ settings: current() });
 }
 
 export async function PUT(request: Request) {
+  const denied = await requireSession(request);
+  if (denied) return denied;
   const parsed = updateSchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) {
     return NextResponse.json({ error: parsed.error.issues[0]?.message ?? "Datos no válidos." }, { status: 400 });

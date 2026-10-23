@@ -1,11 +1,14 @@
 import { NextRequest } from "next/server";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { GET as list, POST as upload } from "@/app/api/documents/route";
 import { DELETE as remove, GET as getOne, PUT as replace } from "@/app/api/documents/[id]/route";
 import { documentErrorResponse } from "@/app/api/documents/shared";
 import { getReadyDocuments } from "@/lib/documents";
 import { makePdf, TARIFAS_40, TARIFAS_45, utf8 } from "../fixtures";
 import { useTempDataDir } from "../helpers";
+
+// Route-level session checks are covered in tests/integration/guard.test.ts.
+vi.mock("@/lib/auth/guard", () => ({ requireSession: async () => null }));
 
 const BASE = "http://localhost:3000/api/documents";
 

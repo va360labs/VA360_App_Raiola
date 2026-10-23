@@ -5,7 +5,9 @@ import { SESSION_COOKIE, verifySessionToken } from "@/lib/auth/session";
 export const config = {
   // Node runtime: the session key lives in the data volume.
   runtime: "nodejs",
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|.*\\.(?:png|jpg|jpeg|svg|ico|webp|woff2?)$).*)"],
+  // Pages only. API routes check the session themselves (lib/auth/guard): a Node-runtime
+  // middleware in front of request bodies breaks some multipart uploads.
+  matcher: ["/((?!api/|_next/static|_next/image|favicon.ico|.*\\.(?:png|jpg|jpeg|svg|ico|webp|woff2?)$).*)"],
 };
 
 export async function middleware(request: NextRequest) {

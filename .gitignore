@@ -20,3 +20,7 @@ data/
 # Playwright
 test-results/
 playwright-report/
+
+# Datos y sesión de las pruebas de aceptación
+e2e/.data/
+e2e/.auth/

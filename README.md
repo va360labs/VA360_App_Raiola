@@ -13,11 +13,11 @@ Demo del webinar VA360 × Raiola. Producto, discovery, PRD y plan en [`doc/`](do
 | 3. Entrada de mensajes: webhooks de WhatsApp Cloud API y correo (Postmark), simulador | Hecha |
 | 4. Redacción con citas (Claude), escalado a una persona y reintento | Hecha |
 | 5. Bandeja con filtros, revisión con fuentes, envío automático y ajustes | Hecha |
-| 6. Contenedor Docker para Coolify y pruebas de aceptación | Pendiente |
+| 6. Contenedor Docker para Coolify y pruebas de aceptación | Hecha |
 
 ## Ejecutar en local
 
-Requisitos: Node.js 22 o superior.
+Requisitos: Node.js 24 o superior.
 
 1. Copia `.env.example` como `.env` y rellena `ANTHROPIC_API_KEY` y `ADMIN_PASSWORD`.
 2. Instala y arranca con un solo comando:
@@ -37,7 +37,37 @@ En el primer arranque se crea la carpeta `data/` con la base de datos vacía y l
 | `npm run dev` | Servidor de desarrollo en el puerto 3000 |
 | `npm run build` y `npm start` | Build de producción y servidor |
 | `npm test` | Tests unitarios y de integración (Vitest) |
+| `npm run test:e2e` | Build y pruebas de aceptación (Playwright): un test por criterio del PRD y auditoría de accesibilidad con axe. Usa una carpeta de datos nueva y el modelo de pruebas, sin coste de Claude. La primera vez: `npx playwright install chromium` |
 | `npm run lint` · `npm run typecheck` | ESLint y TypeScript |
+
+## Desplegar en Coolify
+
+La aplicación es un único contenedor (Next.js en modo standalone + SQLite) con los datos en el volumen `/data`.
+
+1. En Coolify, crea un recurso nuevo desde este repositorio de GitHub con el build pack **Dockerfile**.
+2. **Puerto**: `3000`.
+3. **Almacenamiento persistente**: un volumen montado en `/data` (base de datos, documentos subidos y secretos generados). Sin él, los datos se pierden al redesplegar.
+4. **Variables de entorno**:
+
+   | Variable | Obligatoria | Para qué |
+   |---|---|---|
+   | `ANTHROPIC_API_KEY` | Sí | Redactar las respuestas con Claude |
+   | `ADMIN_PASSWORD` | Sí | Entrar al panel |
+   | `ANTHROPIC_MODEL` | No | Otro modelo de Claude (por defecto `claude-opus-5-5`) |
+   | `WHATSAPP_VERIFY_TOKEN`, `WHATSAPP_APP_SECRET` | Para conectar WhatsApp | Verificación del webhook en Meta y firma de los mensajes |
+   | `EMAIL_WEBHOOK_TOKEN` | Para conectar el correo | Token del webhook de correo entrante |
+   | `SESSION_SECRET` | No | Firma de la sesión (si falta, se genera y se guarda en `/data`) |
+   | `APP_TIMEZONE` | No | Zona horaria del panel (por defecto `Europe/Madrid`) |
+
+   Los tokens de los webhooks que no definas se generan solos y no se muestran en el panel: para conectar WhatsApp o un proveedor de correo reales, defínelos tú para poder copiarlos en Meta o en el proveedor.
+5. **Health check**: ruta `/api/health` (la imagen ya trae un `HEALTHCHECK`).
+6. **Réplicas**: una. La cola de redacción se procesa dentro del propio proceso.
+
+Para probar la imagen en local:
+
+```bash
+docker build -t va360-app-raiola . && docker run -p 3000:3000 -v va360-data:/data -e ADMIN_PASSWORD=elige-una-clave -e ANTHROPIC_API_KEY=tu-clave va360-app-raiola
+```
 
 ## Cómo se redacta cada respuesta
 

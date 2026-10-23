@@ -1,10 +1,13 @@
 import { NextResponse } from "next/server";
+import { requireSession } from "@/lib/auth/guard";
 import { MessageActionError } from "@/lib/messages";
 
 type Params = { params: Promise<{ id: string }> };
 
-/** Runs a message action and maps its errors to 404 / 409 / 400. */
-export async function runAction(ctx: Params, action: (id: number) => unknown) {
+/** Checks the session, runs a message action and maps its errors to 404 / 409 / 400. */
+export async function runAction(request: Request, ctx: Params, action: (id: number) => unknown) {
+  const denied = await requireSession(request);
+  if (denied) return denied;
   const id = Number((await ctx.params).id);
   try {
     if (!Number.isInteger(id) || id <= 0) throw new MessageActionError("not_found", "El mensaje no existe.");

@@ -145,7 +145,7 @@ export function InboxView() {
                     </span>
                     <span className="mt-2 flex flex-wrap items-center gap-2">
                       <StatusChip status={m.status} sendMode={m.sendMode} />
-                      {m.simulated && <span className="text-xs text-ink-subtle">Simulado</span>}
+                      {m.simulated && <span className="text-xs text-ink-muted">Simulado</span>}
                     </span>
                   </button>
                 </li>

@@ -9,8 +9,10 @@
     "fase-2-documentos",
     "fase-3-entrada",
     "fase-4-redaccion",
-    "fase-5-bandeja"
+    "fase-5-bandeja",
+    "fase-6-contenedor-qa",
+    "tests"
   ],
-  "current_phase": "review-fase-5",
-  "last_updated": "2026-10-23T18:25:43Z"
+  "current_phase": "review-fase-6",
+  "last_updated": "2026-10-23T18:50:40Z"
 }

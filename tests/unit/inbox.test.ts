@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import { getDb } from "@/lib/db";
 import { listSimulatedConversations } from "@/lib/inbox/conversations";
 import { buildInboundEmailPayload, hasValidEmailToken, parseInboundEmail } from "@/lib/inbox/email";
-import { ingestMessages, UNSUPPORTED_REASON } from "@/lib/inbox/ingest";
+import { arrivalTime, ingestMessages, UNSUPPORTED_REASON } from "@/lib/inbox/ingest";
 import { buildSimulatedRequest, internalBaseUrl, simulatorInputSchema } from "@/lib/inbox/simulator";
 import { PayloadError, type InboundMessage } from "@/lib/inbox/types";
 import {
@@ -177,6 +177,12 @@ describe("storing messages", () => {
       review_reason: UNSUPPORTED_REASON,
     });
     expect(pendingJobs("draft")).toEqual([]);
+  });
+
+  it("uses the exact arrival time for live messages and the provider time for late ones", () => {
+    const now = new Date("2026-10-23T10:00:00.456Z");
+    expect(arrivalTime("2026-10-23T10:00:00.000Z", now)).toBe("2026-10-23T10:00:00.456Z");
+    expect(arrivalTime("2026-10-23T09:50:00.000Z", now)).toBe("2026-10-23T09:50:00.000Z");
   });
 
   it("keeps the same id on different channels apart", () => {

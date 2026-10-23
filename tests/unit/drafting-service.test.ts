@@ -13,6 +13,9 @@ import { claimNextJob, enqueueJob, pendingJobs, requeueStaleJobs } from "@/lib/j
 import { TARIFAS_40, TARIFAS_45, utf8 } from "../fixtures";
 import { useTempDataDir } from "../helpers";
 
+// Route-level session checks are covered in tests/integration/guard.test.ts.
+vi.mock("@/lib/auth/guard", () => ({ requireSession: async () => null }));
+
 let counter = 0;
 function receive(body: string, overrides: Partial<InboundMessage> = {}): number {
   counter++;

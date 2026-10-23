@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { GET as listRoute } from "@/app/api/messages/route";
 import { GET as detailRoute } from "@/app/api/messages/[id]/route";
 import { POST as discardRoute } from "@/app/api/messages/[id]/discard/route";
@@ -29,6 +29,9 @@ import { inboxStatusLabel } from "@/lib/messages/status";
 import { setSetting } from "@/lib/settings";
 import { TARIFAS_40, TARIFAS_45, utf8 } from "../fixtures";
 import { useTempDataDir } from "../helpers";
+
+// Route-level session checks are covered in tests/integration/guard.test.ts.
+vi.mock("@/lib/auth/guard", () => ({ requireSession: async () => null }));
 
 let n = 0;
 function receive(body: string, overrides: Partial<InboundMessage> = {}): number {
@@ -84,10 +87,10 @@ describe("inbox", () => {
     expect(listInbox({ status: "draft_ready" }).map((r) => r.id)).toEqual([price]);
     expect(listInbox({ status: "new" }).map((r) => r.id)).toEqual([mail]);
 
-    const body = await listRoute(new NextRequest("http://localhost/api/messages?status=needs_review&channel=whatsapp")).json();
+    const body = await (await listRoute(new NextRequest("http://localhost/api/messages?status=needs_review&channel=whatsapp"))).json();
     expect(body.messages.map((m: { id: number }) => m.id)).toEqual([parking]);
     expect(body.needsReview).toBe(1);
-    const unfiltered = await listRoute(new NextRequest("http://localhost/api/messages?status=raro&channel=sms")).json();
+    const unfiltered = await (await listRoute(new NextRequest("http://localhost/api/messages?status=raro&channel=sms"))).json();
     expect(unfiltered.messages).toHaveLength(3);
   });
 
@@ -95,7 +98,7 @@ describe("inbox", () => {
     await createDocument({ name: "Tarifas.txt", bytes: utf8(TARIFAS_40), category: "tarifas" });
     const first = receive("Hola", { from: "34611111111" });
     sendReply(first, "Hola, ¿en qué podemos ayudarte?");
-    const id = receive("¿Cuánto cuesta una sesión?", { from: "34611111111", receivedAt: new Date(Date.now() + 1000).toISOString() });
+    const id = receive("¿Cuánto cuesta una sesión?", { from: "34611111111", receivedAt: new Date(Date.now() + 120_000).toISOString() });
     await draftMessage(id, fake);
 
     const detail = getMessageDetail(id)!;
@@ -280,7 +283,7 @@ describe("settings API", () => {
   const put = (body: unknown) => putSettingsRoute(new Request("http://x", { method: "PUT", body: JSON.stringify(body) }));
 
   it("reads and updates the settings", async () => {
-    expect((await getSettingsRoute().json()).settings).toEqual({
+    expect((await (await getSettingsRoute(new Request("http://x"))).json()).settings).toEqual({
       autoSend: false,
       ackMessage: "Hemos recibido tu mensaje. Una persona del equipo te responderá lo antes posible.",
       clinicName: "",

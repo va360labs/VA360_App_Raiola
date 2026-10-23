@@ -7,7 +7,7 @@ const STYLE: Record<InboxStatus, { Icon: typeof Circle; className: string }> = {
   draft_ready: { Icon: CheckCircle2, className: "bg-action-subtle text-action-active" },
   needs_review: { Icon: AlertTriangle, className: "bg-review-subtle text-review" },
   sent: { Icon: Send, className: "bg-calm text-ink-muted" },
-  discarded: { Icon: Ban, className: "bg-calm text-ink-subtle" },
+  discarded: { Icon: Ban, className: "bg-calm text-ink-muted" },
 };
 
 export function StatusChip({ status, sendMode }: { status: InboxStatus; sendMode: string | null }) {

@@ -5,6 +5,15 @@ import type { InboundMessage } from "./types";
 
 export const UNSUPPORTED_REASON = "Tipo de mensaje no soportado";
 
+/**
+ * Providers send whole seconds (WhatsApp) or minutes (email headers). For a
+ * message arriving live, the arrival time keeps it after a reply sent in the
+ * same second; a late or retried delivery keeps the provider's time.
+ */
+export function arrivalTime(providerTime: string, now: Date = new Date()): string {
+  return Math.abs(Date.parse(providerTime) - now.getTime()) < 60_000 ? now.toISOString() : providerTime;
+}
+
 export interface IngestResult {
   received: number;
   duplicates: number;
@@ -37,6 +46,7 @@ export function ingestMessages(messages: InboundMessage[]): IngestResult {
       const unsupported = message.kind === "unsupported";
       const inserted = insertMessage.run({
         ...message,
+        receivedAt: arrivalTime(message.receivedAt),
         contactId: contact.id,
         simulated: message.simulated ? 1 : 0,
         status: unsupported ? "needs_review" : "new",

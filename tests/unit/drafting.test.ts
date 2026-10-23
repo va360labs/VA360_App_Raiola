@@ -210,6 +210,11 @@ describe("fake model", () => {
     expect(result.text.startsWith("According to our information")).toBe(true);
   });
 
+  it("has triggers for a failing call and an invented figure", async () => {
+    await expect(fake.draft(request("¿Cuánto cuesta una sesión? #fallo-de-prueba"))).rejects.toThrow();
+    expect((await fake.draft(request("¿Cuánto cuesta una sesión? #cifra-inventada"))).text).toContain("99 €");
+  });
+
   it("escalates clinical and uncovered questions", async () => {
     expect((await fake.draft(request("Me duele la rodilla, ¿qué ejercicios hago?"))).escalation).toBe("clinical");
     expect((await fake.draft(request("¿Tenéis parking?"))).escalation).toBe("no_information");

@@ -10,6 +10,9 @@ import { signWhatsAppBody } from "@/lib/inbox/whatsapp";
 import { useTempDataDir } from "../helpers";
 import { postmarkInbound, whatsappImage, whatsappText } from "../inbox-fixtures";
 
+// Route-level session checks are covered in tests/integration/guard.test.ts.
+vi.mock("@/lib/auth/guard", () => ({ requireSession: async () => null }));
+
 const BASE = "http://localhost:3000";
 
 function post(path: string, body: string, headers: Record<string, string> = {}) {
@@ -170,7 +173,7 @@ describe("simulator", () => {
   it("lists the simulated conversations", async () => {
     routeFetchToWebhooks();
     await simulatorSend(post("/api/simulator/send", JSON.stringify({ channel: "whatsapp", contact: "34600111222", text: "hola" })));
-    const body = await conversations().json();
+    const body = await (await conversations(new Request("http://x"))).json();
     expect(body.conversations).toHaveLength(1);
     expect(body.conversations[0].items[0]).toMatchObject({ direction: "in", text: "hola", status: "new" });
   });

@@ -433,7 +433,7 @@
     "id": "item-0ba8b9da",
     "name": "UC-204: Consultar la bandeja",
     "description": "# UC-204: Consultar la bandeja\n\n**User Story:** US-02: Bandeja única de mensajes\n**Actor:** recepción (ICP-2)\n**Horas estimadas:** 8.0\n**Pantallas:** Bandeja, Detalle de mensaje\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.1] La bandeja lista los mensajes de ambos canales del más reciente al más antiguo; cada fila muestra el icono del canal, el contacto, los primeros 100 caracteres del texto, la hora y el estado (Nuevo, Borrador listo, Requiere revisión, Enviado, Descartado).\n- AC-02: [JR-F1.4] La bandeja permite filtrar por canal y por estado, y muestra en todo momento el número de mensajes en «Requiere revisión».\n- AC-03: [JR-F1.5] Al abrir un mensaje se ve su texto completo, el historial de mensajes y respuestas con ese contacto y el borrador propuesto con sus citas.\n- AC-04: [JE-F1.2] Un mensaje nuevo aparece en la bandeja abierta sin recargar la página en menos de 10 segundos desde que llega.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "in_progress",
     "parent_id": "item-f3721621",
     "labels": [
       "UC",
@@ -451,7 +451,8 @@
     },
     "created_at": "2026-10-23T17:12:14.639635+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:18:14.221897+00:00"
   },
   {
     "id": "ac-2d4f62a9",
@@ -705,7 +706,7 @@
     "id": "item-edd20800",
     "name": "US-04: Revisión y envío",
     "description": "# US-04: Revisión y envío\n\n**Horas estimadas:** 11.0\n**Pantallas:** Ajustes, Detalle de mensaje\n\nComo persona de recepción, quiero decidir qué se envía y poder delegar lo que está respaldado, para tener el control sin escribirlo todo a mano.",
-    "state": "user_stories",
+    "state": "in_progress",
     "parent_id": null,
     "labels": [
       "US"
@@ -721,13 +722,13 @@
     "created_at": "2026-10-23T17:12:14.695674+00:00",
     "external_source": "",
     "external_id": "",
-    "updated_at": "2026-10-23T17:12:14.703186+00:00"
+    "updated_at": "2026-10-23T18:18:16.144501+00:00"
   },
   {
     "id": "item-eb9bea4d",
     "name": "UC-401: Revisar, editar y aprobar respuestas",
     "description": "# UC-401: Revisar, editar y aprobar respuestas\n\n**User Story:** US-04: Revisión y envío\n**Actor:** recepción (ICP-2)\n**Horas estimadas:** 6.0\n**Pantallas:** Detalle de mensaje\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.5] Cuando la persona edita el borrador y pulsa «Aprobar y enviar», el mensaje pasa a «Enviado», el texto final aparece en el historial del contacto con la hora de envío y queda registrado en el registro de envíos con canal, destinatario y texto.\n- AC-02: [JE-F1.3] En un mensaje en «Requiere revisión» la persona puede escribir la respuesta desde cero y enviarla; el envío queda registrado igual que en AC-27.\n- AC-03: [JR-F1.5] La persona puede descartar un mensaje sin responder (pasa a «Descartado») y reabrirlo después (vuelve a su estado anterior).\n- AC-04: [JE-F1.3] Cada respuesta enviada queda marcada como «Aprobada sin cambios», «Editada» o «Escrita a mano», y la bandeja muestra el porcentaje de respuestas aprobadas sin cambios de los últimos 7 días.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "in_progress",
     "parent_id": "item-edd20800",
     "labels": [
       "UC",
@@ -745,7 +746,8 @@
     },
     "created_at": "2026-10-23T17:12:14.708183+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:18:16.133408+00:00"
   },
   {
     "id": "ac-6f290e1d",
@@ -815,7 +817,7 @@
     "id": "item-85e34c8a",
     "name": "UC-402: Activar el envío automático",
     "description": "# UC-402: Activar el envío automático\n\n**User Story:** US-04: Revisión y envío\n**Actor:** dueño/a de la clínica (ICP-1)\n**Horas estimadas:** 5.0\n**Pantallas:** Ajustes\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.2] El envío automático está desactivado en una instalación nueva; al activarlo, cada borrador respaldado por los documentos y sin motivo de revisión se envía en menos de 30 segundos desde la recepción y queda marcado como «Enviado automáticamente».\n- AC-02: [JE-F1.2] Con el envío automático activado, un mensaje en «Requiere revisión» no recibe respuesta automática con datos; en su lugar el contacto recibe una sola vez el aviso de recepción configurable (por defecto: «Hemos recibido tu mensaje. Una persona del equipo te responderá lo antes posible.»).\n- AC-03: [JE-F1.3] Al desactivar el envío automático, el siguiente mensaje que llega queda en «Borrador listo» o «Requiere revisión» y no se envía nada sin aprobación.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "in_progress",
     "parent_id": "item-edd20800",
     "labels": [
       "UC",
@@ -833,7 +835,8 @@
     },
     "created_at": "2026-10-23T17:12:14.722737+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T18:18:18.017262+00:00"
   },
   {
     "id": "ac-900bacb0",

@@ -1,15 +1,18 @@
-import { Settings } from "lucide-react";
-import { EmptyState } from "@/components/ui/EmptyState";
+import { SettingsForm } from "@/components/settings/SettingsForm";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { getSetting } from "@/lib/settings";
 
 export default function AjustesPage() {
   return (
     <>
       <PageHeader title="Ajustes" />
-      <EmptyState Icon={Settings} title="Ajustes de la clínica">
-        Aquí activarás el envío automático y editarás el aviso de recepción. Estará disponible junto con la revisión
-        de respuestas.
-      </EmptyState>
+      <SettingsForm
+        initial={{
+          autoSend: getSetting("auto_send") === "true",
+          ackMessage: getSetting("ack_message"),
+          clinicName: getSetting("clinic_name"),
+        }}
+      />
     </>
   );
 }

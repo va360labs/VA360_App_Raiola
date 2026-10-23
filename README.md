@@ -12,7 +12,7 @@ Demo del webinar VA360 × Raiola. Producto, discovery, PRD y plan en [`doc/`](do
 | 2. Documentos: subida (PDF, DOCX, TXT, Markdown), reemplazo y borrado | Hecha |
 | 3. Entrada de mensajes: webhooks de WhatsApp Cloud API y correo (Postmark), simulador | Hecha |
 | 4. Redacción con citas (Claude), escalado a una persona y reintento | Hecha |
-| 5. Bandeja, revisión y envío automático | Pendiente |
+| 5. Bandeja con filtros, revisión con fuentes, envío automático y ajustes | Hecha |
 | 6. Contenedor Docker para Coolify y pruebas de aceptación | Pendiente |
 
 ## Ejecutar en local
@@ -46,6 +46,12 @@ Cada mensaje nuevo entra en una cola que procesa el propio servidor. Claude (por
 El borrador queda **listo** solo si cita los documentos y cada precio, hora, fecha o cifra que contiene aparece en el texto citado. Si no, el mensaje pasa a **Requiere revisión** con el motivo: «No hay información en los documentos», «Consulta clínica», «Dato no encontrado en los documentos» o «No se pudo generar el borrador» (este último se puede reintentar).
 
 Para pruebas sin coste, `DRAFT_MODEL=fake` usa un modelo determinista que responde con la línea del documento que más se parece a la pregunta.
+
+## Revisión y envío
+
+En la **Bandeja** cada mensaje muestra su conversación y la respuesta propuesta con sus fuentes numeradas (cada una abre el fragmento del documento con el texto citado resaltado). Se puede aprobar tal cual, editar, escribir desde cero o descartar (y reabrir). Cada envío queda marcado como «Aprobada sin cambios», «Editada» o «Escrita a mano», y la bandeja muestra el porcentaje de aprobadas sin cambios de los últimos 7 días.
+
+En **Ajustes** se activa el envío automático (desactivado por defecto): las respuestas respaldadas por los documentos se envían solas y los mensajes que necesitan revisión reciben una sola vez el aviso de recepción. En esta versión los envíos son **simulados**: quedan registrados y se ven en el simulador, pero no salen por WhatsApp ni por email.
 
 ## Webhooks
 

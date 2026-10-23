@@ -8,8 +8,9 @@
     "fase-1-base",
     "fase-2-documentos",
     "fase-3-entrada",
-    "fase-4-redaccion"
+    "fase-4-redaccion",
+    "fase-5-bandeja"
   ],
-  "current_phase": "review-fase-4",
-  "last_updated": "2026-10-23T18:16:30Z"
+  "current_phase": "review-fase-5",
+  "last_updated": "2026-10-23T18:25:43Z"
 }

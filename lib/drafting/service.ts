@@ -1,5 +1,6 @@
 import { getDb } from "@/lib/db";
 import { enqueueJob } from "@/lib/jobs";
+import { afterTriage } from "@/lib/messages/autosend";
 import { getSetting } from "@/lib/settings";
 import { unsupportedFigures } from "./figures";
 import { AnthropicDraftModel } from "./anthropic";
@@ -116,6 +117,7 @@ export async function draftMessage(messageId: number, model?: DraftModel): Promi
   }
 
   saveOutcome(messageId, outcome, Date.now() - started);
+  afterTriage(messageId);
   return outcome;
 }
 

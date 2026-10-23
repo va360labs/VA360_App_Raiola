@@ -1,5 +1,6 @@
 import { getDb } from "@/lib/db";
 import { enqueueJob } from "@/lib/jobs";
+import { afterTriage } from "@/lib/messages/autosend";
 import type { InboundMessage } from "./types";
 
 export const UNSUPPORTED_REASON = "Tipo de mensaje no soportado";
@@ -28,7 +29,8 @@ export function ingestMessages(messages: InboundMessage[]): IngestResult {
      VALUES (@contactId, @channel, 'in', @externalId, @subject, @body, @kind, @simulated, @status, @reviewReason, @receivedAt)`,
   );
 
-  return db.transaction(() => {
+  const unsupportedIds: number[] = [];
+  const stored = db.transaction(() => {
     const result: IngestResult = { received: 0, duplicates: 0, messageIds: [] };
     for (const message of messages) {
       const contact = upsertContact.get(message) as { id: number };
@@ -47,8 +49,13 @@ export function ingestMessages(messages: InboundMessage[]): IngestResult {
       const messageId = Number(inserted.lastInsertRowid);
       result.received++;
       result.messageIds.push(messageId);
-      if (!unsupported) enqueueJob("draft", { messageId });
+      if (unsupported) unsupportedIds.push(messageId);
+      else enqueueJob("draft", { messageId });
     }
     return result;
   })();
+
+  // Messages that go straight to review still get the acknowledgement when automatic sending is on.
+  unsupportedIds.forEach((id) => afterTriage(id));
+  return stored;
 }

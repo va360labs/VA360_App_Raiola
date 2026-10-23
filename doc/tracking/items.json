@@ -192,7 +192,7 @@
     "id": "item-f3721621",
     "name": "US-02: Bandeja única de mensajes",
     "description": "# US-02: Bandeja única de mensajes\n\n**Horas estimadas:** 23.0\n**Pantallas:** Bandeja, Detalle de mensaje, Simulador\n\nComo persona de recepción, quiero ver en un solo sitio los mensajes de WhatsApp y email, para no ir saltando entre aplicaciones.",
-    "state": "user_stories",
+    "state": "in_progress",
     "parent_id": null,
     "labels": [
       "US"
@@ -208,13 +208,13 @@
     "created_at": "2026-10-23T17:12:14.590735+00:00",
     "external_source": "",
     "external_id": "",
-    "updated_at": "2026-10-23T17:12:14.596732+00:00"
+    "updated_at": "2026-10-23T17:59:53.213592+00:00"
   },
   {
     "id": "item-db4c27b7",
     "name": "UC-201: Recibir mensajes de WhatsApp por webhook",
     "description": "# UC-201: Recibir mensajes de WhatsApp por webhook\n\n**User Story:** US-02: Bandeja única de mensajes\n**Actor:** sistema (WhatsApp Cloud API)\n**Horas estimadas:** 6.0\n**Pantallas:** \n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.1] Cuando llega la petición de verificación de WhatsApp Cloud API con el token de verificación configurado, el webhook responde con el valor de `hub.challenge`; con un token distinto responde con estado 403.\n- AC-02: [JR-F1.1] Cuando llega un mensaje de texto con el formato de WhatsApp Cloud API, el webhook responde con estado 200 en menos de 2 segundos y el mensaje aparece en la bandeja con canal WhatsApp, número, nombre del contacto, texto y hora de recepción.\n- AC-03: [JR-F1.2] Si el mismo mensaje (mismo identificador de WhatsApp) llega dos veces, la bandeja muestra una sola entrada.\n- AC-04: [JE-F1.1] Si la instalación tiene activada la verificación de firma de WhatsApp y la firma de la petición no coincide, el webhook responde con estado 401 y no guarda el mensaje.\n- AC-05: [JR-F1.4] Cuando llega un mensaje que no es de texto (imagen, audio, documento), aparece en la bandeja con la nota «Tipo de mensaje no soportado» y en estado «Requiere revisión».\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "in_progress",
     "parent_id": "item-f3721621",
     "labels": [
       "UC",
@@ -232,7 +232,8 @@
     },
     "created_at": "2026-10-23T17:12:14.601234+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T17:59:53.201502+00:00"
   },
   {
     "id": "ac-879aa56a",
@@ -318,7 +319,7 @@
     "id": "item-d1873b64",
     "name": "UC-202: Recibir emails por webhook",
     "description": "# UC-202: Recibir emails por webhook\n\n**User Story:** US-02: Bandeja única de mensajes\n**Actor:** sistema (proveedor de correo entrante)\n**Horas estimadas:** 4.0\n**Pantallas:** \n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.1] Cuando llega un correo entrante con remitente, asunto, cuerpo de texto e identificador de mensaje, el webhook responde con estado 200 en menos de 2 segundos y el mensaje aparece en la bandeja con canal Email, remitente, asunto, texto y hora de recepción.\n- AC-02: [JE-F1.1] Si la petición no incluye el token del webhook de correo configurado en el servidor, se responde con estado 401 y no se guarda nada; si llega dos veces el mismo identificador de mensaje, la bandeja muestra una sola entrada.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "in_progress",
     "parent_id": "item-f3721621",
     "labels": [
       "UC",
@@ -336,7 +337,8 @@
     },
     "created_at": "2026-10-23T17:12:14.613851+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T17:59:55.071007+00:00"
   },
   {
     "id": "ac-a0d741e5",
@@ -374,7 +376,7 @@
     "id": "item-2f0910b6",
     "name": "UC-203: Simular mensajes",
     "description": "# UC-203: Simular mensajes\n\n**User Story:** US-02: Bandeja única de mensajes\n**Actor:** recepción o quien hace la demo (ICP-2)\n**Horas estimadas:** 5.0\n**Pantallas:** Simulador\n\n## Criterios de Aceptacion\n- AC-01: [JR-F1.1] Dada la pantalla Simulador, cuando la persona elige canal (WhatsApp o Email), escribe un contacto y un texto y pulsa Enviar, entonces el mensaje entra por el mismo webhook que un mensaje real y aparece en la bandeja en menos de 5 segundos con la etiqueta «Simulado».\n- AC-02: [JR-F1.2] El simulador muestra la conversación de cada contacto simulado con los mensajes enviados y las respuestas marcadas como enviadas, en orden cronológico, y se actualiza sin recargar la página en menos de 10 segundos.\n\n## Contexto\nPRD doc/prd/respuestas-automaticas/prd.md",
-    "state": "backlog",
+    "state": "in_progress",
     "parent_id": "item-f3721621",
     "labels": [
       "UC",
@@ -392,7 +394,8 @@
     },
     "created_at": "2026-10-23T17:12:14.625635+00:00",
     "external_source": "",
-    "external_id": ""
+    "external_id": "",
+    "updated_at": "2026-10-23T17:59:56.940849+00:00"
   },
   {
     "id": "ac-d86761af",

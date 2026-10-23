@@ -6,8 +6,9 @@
     "stitch_designs",
     "db_infra",
     "fase-1-base",
-    "fase-2-documentos"
+    "fase-2-documentos",
+    "fase-3-entrada"
   ],
-  "current_phase": "review-fase-2",
-  "last_updated": "2026-10-23T17:57:54Z"
+  "current_phase": "review-fase-3",
+  "last_updated": "2026-10-23T18:05:59Z"
 }

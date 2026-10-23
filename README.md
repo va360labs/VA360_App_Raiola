@@ -10,7 +10,7 @@ Demo del webinar VA360 × Raiola. Producto, discovery, PRD y plan en [`doc/`](do
 |---|---|
 | 1. Base: proyecto, base de datos, comprobación de estado y acceso | Hecha |
 | 2. Documentos: subida (PDF, DOCX, TXT, Markdown), reemplazo y borrado | Hecha |
-| 3. Entrada de mensajes y simulador | Pendiente |
+| 3. Entrada de mensajes: webhooks de WhatsApp Cloud API y correo (Postmark), simulador | Hecha |
 | 4. Redacción con citas | Pendiente |
 | 5. Bandeja, revisión y envío automático | Pendiente |
 | 6. Contenedor Docker para Coolify y pruebas de aceptación | Pendiente |
@@ -38,6 +38,15 @@ En el primer arranque se crea la carpeta `data/` con la base de datos vacía y l
 | `npm run build` y `npm start` | Build de producción y servidor |
 | `npm test` | Tests unitarios y de integración (Vitest) |
 | `npm run lint` · `npm run typecheck` | ESLint y TypeScript |
+
+## Webhooks
+
+| Canal | URL | Autenticación |
+|---|---|---|
+| WhatsApp Cloud API | `/api/webhooks/whatsapp` (GET para la verificación de Meta, POST para los mensajes) | Token de verificación `WHATSAPP_VERIFY_TOKEN`; firma `X-Hub-Signature-256` si se define `WHATSAPP_APP_SECRET` |
+| Correo entrante (formato Postmark) | `/api/webhooks/email` | Cabecera `X-Webhook-Token` o `?token=` con `EMAIL_WEBHOOK_TOKEN` |
+
+Si no defines los tokens, la aplicación los genera y los guarda en `data/secrets.json`. Los mensajes repetidos (mismo identificador) se guardan una sola vez. El **Simulador** del panel envía mensajes de prueba por estos mismos webhooks.
 
 ## Comprobación de estado
 

@@ -5,3 +5,18 @@
 
 # Ajustes locales de Claude Code
 .claude/settings.local.json
+
+# Dependencias y builds
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Datos locales de la app (SQLite, documentos subidos, secretos generados)
+data/
+
+# Playwright
+test-results/
+playwright-report/

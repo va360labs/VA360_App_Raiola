@@ -1,0 +1,12 @@
+{
+  "feature": "respuestas-automaticas",
+  "has_ui": true,
+  "has_db": true,
+  "completed_phases": [
+    "stitch_designs",
+    "db_infra",
+    "fase-1-base"
+  ],
+  "current_phase": "review-fase-1",
+  "last_updated": "2026-10-23T17:49:47Z"
+}

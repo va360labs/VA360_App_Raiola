@@ -1,0 +1,77 @@
+@import "tailwindcss";
+/* Single source of the brand tokens (light + dark). */
+@import "../doc/brand/brand_kit/variables.css";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Only brand colours exist as utilities: the default Tailwind palette is removed. */
+@theme inline {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --color-canvas: var(--color-background);
+  --color-panel: var(--color-surface);
+  --color-panel-raised: var(--color-surface-raised);
+  --color-overlay: var(--color-surface-overlay);
+  --color-ink: var(--color-text-primary);
+  --color-ink-muted: var(--color-text-secondary);
+  --color-ink-subtle: var(--color-text-tertiary);
+  --color-ink-inverse: var(--color-text-inverse);
+  --color-action: var(--color-primary);
+  --color-action-hover: var(--color-primary-hover);
+  --color-action-active: var(--color-primary-active);
+  --color-action-subtle: var(--color-primary-subtle);
+  --color-on-action: var(--color-on-primary);
+  --color-calm: var(--color-secondary-subtle);
+  --color-line: var(--color-border);
+  --color-line-strong: var(--color-border-strong);
+  --color-review: var(--color-warning);
+  --color-review-subtle: var(--color-warning-subtle);
+  --color-danger: var(--color-error);
+  --color-danger-subtle: var(--color-error-subtle);
+
+  --font-sans: var(--font-atkinson), system-ui, sans-serif;
+  --font-mono: var(--font-atkinson-mono), ui-monospace, monospace;
+
+  --radius-control: var(--radius-sm);
+  --radius-panel: var(--radius-md);
+  --radius-dialog: var(--radius-lg);
+
+  --shadow-float: var(--shadow-md);
+}
+
+:root {
+  --font-heading: var(--font-atkinson), system-ui, sans-serif;
+  --font-body: var(--font-atkinson), system-ui, sans-serif;
+  --font-label: var(--font-atkinson), system-ui, sans-serif;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Times, prices and counters line up. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

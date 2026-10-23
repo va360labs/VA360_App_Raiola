@@ -1,6 +1,6 @@
 # Progreso del Proyecto
 
-> Actualizado: 2026-10-23T17:12:14.781846+00:00
+> Actualizado: 2026-10-23T17:41:32.037175+00:00
 
 ## User Stories
 
@@ -10,7 +10,7 @@
 | US-02 | US-02: Bandeja única de mensajes | User Stories | 0 | 4 | 0% |
 | US-03 | US-03: Borradores con citas | User Stories | 0 | 2 | 0% |
 | US-04 | US-04: Revisión y envío | User Stories | 0 | 2 | 0% |
-| US-05 | US-05: Acceso y despliegue | User Stories | 0 | 2 | 0% |
+| US-05 | US-05: Acceso y despliegue | In Progress | 0 | 2 | 0% |
 
 ## Use Cases
 
@@ -26,5 +26,5 @@
 | UC-302 | US-03 | Backlog | 0 | 3 | 0% |
 | UC-401 | US-04 | Backlog | 0 | 4 | 0% |
 | UC-402 | US-04 | Backlog | 0 | 3 | 0% |
-| UC-501 | US-05 | Backlog | 0 | 2 | 0% |
-| UC-502 | US-05 | Backlog | 0 | 3 | 0% |
+| UC-501 | US-05 | In Progress | 0 | 2 | 0% |
+| UC-502 | US-05 | In Progress | 0 | 3 | 0% |

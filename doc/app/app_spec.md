@@ -32,10 +32,11 @@
 <!-- @specbox:zone start kind="manual" id="brand_visual" -->
 ## 3. Brand & Visual
 
-- **Brand kit:** `doc/design/brand_kit.md` (referencia)
-- **VEG arquetipo:** {Corporate | Startup | Creative | Consumer | Gen-Z | Gobierno}
-- **Modo VEG:** {uniforme | per_profile | per_icp}
-- **Stitch project_id:** {id si configurado}
+- **Brand kit:** `doc/brand/brand_kit/SKILL.md` (tokens en `variables.css`; DESIGN.md en `doc/design/DESIGN.md`)
+- **Dirección:** la recepción entre paciente y paciente; verde salvia `#46684F` sobre blanco roto `#F5F6F2`, Atkinson Hyperlegible Next, interfaz tranquila sin adornos
+- **VEG arquetipo:** Corporate (solo para rellenar huecos; la marca manda)
+- **Modo VEG:** uniforme
+- **Stitch project_id:** sin configurar (pendiente de API key)
 <!-- @specbox:zone end -->
 
 <!-- @specbox:zone start kind="manual" id="conventions" -->

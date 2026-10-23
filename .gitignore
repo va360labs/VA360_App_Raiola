@@ -1,0 +1,7 @@
+# Secretos: nunca se suben a GitHub
+.env
+.env.*
+!.env.example
+
+# Ajustes locales de Claude Code
+.claude/settings.local.json

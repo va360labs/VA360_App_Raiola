@@ -28,7 +28,13 @@ Requisitos: Node.js 24 o superior.
 
 3. Abre http://localhost:3000 y entra con la clave de administración.
 
-En el primer arranque se crea la carpeta `data/` con la base de datos vacía y los secretos que falten. Esa carpeta no se sube a GitHub.
+En el primer arranque se crea la carpeta `data/` con la base de datos y los secretos que falten. Esa carpeta no se sube a GitHub.
+
+## Datos de demostración
+
+En el primer arranque, si no hay ningún documento, la aplicación carga los cinco de la clínica de ejemplo, Fisioterapia Ribera Viva, y pone su nombre. Los documentos están en [`demo/documentos/`](demo/documentos/): tarifas, horarios, política de citas, preguntas frecuentes y tratamientos. Así, un despliegue nuevo se puede enseñar en cuanto arranca.
+
+La carga se hace una sola vez. Si después borras esos documentos, no vuelven al reiniciar, y una instalación que ya tiene documentos no se toca. Para empezar vacía, define `DEMO_DATOS=false`.
 
 ## Comandos
 
@@ -58,6 +64,7 @@ La aplicación es un único contenedor (Next.js en modo standalone + SQLite) con
    | `EMAIL_WEBHOOK_TOKEN` | Para conectar el correo | Token del webhook de correo entrante |
    | `SESSION_SECRET` | No | Firma de la sesión (si falta, se genera y se guarda en `/data`) |
    | `APP_TIMEZONE` | No | Zona horaria del panel (por defecto `Europe/Madrid`) |
+   | `DEMO_DATOS` | No | `false` para arrancar sin los documentos de la clínica de ejemplo |
 
    Los tokens de los webhooks que no definas se generan solos y no se muestran en el panel: para conectar WhatsApp o un proveedor de correo reales, defínelos tú para poder copiarlos en Meta o en el proveedor.
 5. **Health check**: ruta `/api/health` (la imagen ya trae un `HEALTHCHECK`).

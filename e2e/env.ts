@@ -10,4 +10,5 @@ export const E2E_ENV = {
   WHATSAPP_APP_SECRET: "e2e-app-secret",
   EMAIL_WEBHOOK_TOKEN: "e2e-email-token",
   APP_TIMEZONE: "Europe/Madrid",
+  DEMO_DATOS: "false",
 };

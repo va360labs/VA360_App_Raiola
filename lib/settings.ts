@@ -1,6 +1,6 @@
 import { getDb } from "@/lib/db";
 
-export type SettingKey = "auto_send" | "ack_message" | "clinic_name";
+export type SettingKey = "auto_send" | "ack_message" | "clinic_name" | "demo_loaded";
 
 export function getSetting(key: SettingKey): string {
   const row = getDb().prepare("SELECT value FROM settings WHERE key = ?").get(key) as { value: string } | undefined;

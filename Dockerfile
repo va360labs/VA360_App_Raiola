@@ -27,6 +27,8 @@ ENV NODE_ENV=production \
 RUN mkdir -p /data && chown node:node /data
 COPY --from=build --chown=node:node /app/.next/standalone ./
 COPY --from=build --chown=node:node /app/.next/static ./.next/static
+# Documents of the demo clinic, loaded on the first start (DEMO_DATOS=false skips them).
+COPY --from=build --chown=node:node /app/demo ./demo
 USER node
 VOLUME ["/data"]
 EXPOSE 3000
